@@ -1,5 +1,3 @@
-
-
 # Módulo 3: Sistemas interactivos en la red
 
 Esta es la página del módulo 3 del [Máster de Formación
