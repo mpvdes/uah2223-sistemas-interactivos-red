@@ -10,5 +10,5 @@ Alcalá]].
 ** Ejercicios
 - [[file:practicas/e1-marcado.html][Ejercicio 1: marcado de texto]]
 
-=====
+-----
 [[./img/logo.svg]]
