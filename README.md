@@ -2,9 +2,11 @@
 
 # Módulo 3: Sistemas interactivos en la red
 
-Este es el repositorio de trabajo del módulo 3 del [Máster de Formación
+Esta es la página del módulo 3 del [Máster de Formación
 Permanente en Periodismo y Visualización de Datos de la Universidad de
 Alcalá](https://mpvd.es).
+
+En el [repositorio](https://github.com/mpvdes/uah2223-sistemas-interactivos-red) podrás encontrar todos los materiales.
 
 
 ## Slides
