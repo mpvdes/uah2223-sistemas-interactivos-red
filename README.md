@@ -1,3 +1,5 @@
+
+
 # Módulo 3: Sistemas interactivos en la red
 
 Esta es la página del módulo 3 del [Máster de Formación
@@ -15,7 +17,7 @@ En el [repositorio](https://github.com/mpvdes/uah2223-sistemas-interactivos-red)
 
 ## Ejercicios
 
--   [Ejercicio 1: marcado de texto](practicas/e1-marcado.html)
+-   [Ejercicio 1: marcado de texto](practicas/e1-marcado.md)
 
 ---
 
