@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Introducción Web</title>
+<meta name="author" content="(Julián Pérez)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../../assets/css/modifications.css"/>
+
+<link rel="stylesheet" href="../../assets/fonts/webfont-iosevka-11.3.0/iosevka.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/base16/espresso.min.css"/></head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title" style="text-transform:uppercase;font-size:2em" >Introducción Web</h1><h3 class="subtitle">M4.Sistemas Interactivos</h3><br><br><h4>Julián Pérez</h4><br><p>Máster Periodismo y Visualización de Datos</p><p>Universidad de Alcalá</p>
+</section>
+
+
+<section>
+<section id="slide-org9f6e915">
+<h2 id="org9f6e915">Índice</h2>
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li><a href="#/slide-org18f7f91">HTML</a>
+<ul>
+<li><a href="#/slide-org8e5d43d">Manejo de archivos</a></li>
+<li><a href="#/slide-org317de07">Elementos HTML</a></li>
+<li><a href="#/slide-orgfe7218f">Estructura documento HTML</a></li>
+<li><a href="#/slide-orgf6a2fd8">Marcado de texto</a></li>
+<li><a href="#/slide-org0de69ae">Preformateado de texto</a></li>
+<li><a href="#/slide-org48b3dac">Otros enlaces</a></li>
+
+</ul></li>
+<li><a href="#/slide-org2936342">CSS</a>
+<ul>
+<li><a href="#/slide-orgc21a1df">Configuración</a></li>
+<li><a href="#/slide-org9f40cb0">Estructura</a></li>
+<li><a href="#/slide-org95a9482">Sintaxis</a></li>
+<li><a href="#/slide-org570205b">Cajas</a></li>
+<li><a href="#/slide-orge16150a">Tipos de selectores</a></li>
+
+</ul></li>
+
+</ul>
+</div>
+<div class="column" style="float:right; width: 50%">
+<ul>
+<li><a href="#/slide-org55a00f8">JavaScript</a></li>
+<li><a href="#/slide-org223856d">Manuales / Docs</a></li>
+
+</ul>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgd86f855">
+<h2 id="orgd86f855">Resumen</h2>
+<ul>
+<li>Haremos una introducción básica a los elementos que componen una web</li>
+<li>Para qué sirve cada elemento HTML</li>
+<li>Cómo se dan estilos a través de CSS</li>
+<li>Cómo podemos crear tareas o cambiar el comportamiento de los elementos a través de JS</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org18f7f91">
+<h2 id="org18f7f91">HTML</h2>
+<ul>
+<li><i>HTML</i> viene de HyperText Markup Language o lenguaje de marcado de hipertexto</li>
+<li>Es el componente más básico de la Web y define el <span class="underline">significado</span> y la <span class="underline">estructura</span> del contenido web.</li>
+<li>Para la <span class="underline">apariencia</span> contamos con <i>CSS</i> y para la <span class="underline">funcionalidad</span> con <i>JavaScript</i></li>
+
+</ul>
+</section>
+<section id="slide-org18f7f91-split">
+
+<h2>HTML</h2>
+<ul>
+<li>Utiliza marcas para etiquetar texto, imágenes y otros contenidos para mostrarlos en un navegador web.</li>
+<li>Estas marcas incluyen elementos especiales como <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, etc.</li>
+
+</ul>
+</section>
+<section id="slide-org8e5d43d">
+<h3 id="org8e5d43d">Manejo de archivos</h3>
+<ul>
+<li>Es importante que la estructura de los archivos en una carpeta local de tu ordenador sea la misma que después tendrá cuando se aloje en un servidor</li>
+<li>Esta carpeta será la raíz "<code>/</code>" de tu web futura</li>
+<li>Es importante mantener la disciplina de escribir en <b>minúscula y sin espacios</b> para el nombrado de archivos</li>
+<li>Para separar nombres <b>utilizamos el guión medio</b> "<code>-</code>" pero no la barra baja "<code>_</code>"</li>
+
+</ul>
+</section>
+<section id="slide-org8e5d43d-split">
+
+<h3>Manejo de archivos</h3>
+<div class="org-src-container">
+
+<pre   ><code class="bash" >mi-proyecto-web/
+├── assets
+│   ├── css
+│   │   ├── custom.css
+│   │   └── style.css
+│   └── js
+│       └── custom.js
+├── img
+│   └── paisaje.jpg
+└── index.html
+</code></pre>
+</div>
+</section>
+<section id="slide-org317de07">
+<h3 id="org317de07">Elementos HTML</h3>
+<div class="outline-text-3" id="text-org317de07">
+</div>
+</section>
+<section id="slide-org9b0119c">
+<h4 id="org9b0119c">Qué es un elemento HTML?</h4>
+
+<div id="org28c6b5a" class="figure">
+<p><img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-small.png" alt="grumpy-cat-small.png" height="200px" display="block" />
+</p>
+<p><span class="figure-number">Figura 1: </span>Partes de un elemento HTML. Fuente: <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics">Mozilla</a></p>
+</div>
+
+</section>
+<section id="slide-org18bc2d6">
+<h4 id="org18bc2d6">Atributo HTML</h4>
+
+<div id="orgf0595d8" class="figure">
+<p><img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-attribute-small.png" alt="grumpy-cat-attribute-small.png" height="100px" display="block" />
+</p>
+<p><span class="figure-number">Figura 2: </span>Atributo del elemento HTML. Fuente: <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics">Mozilla</a></p>
+</div>
+
+</section>
+<section id="slide-org9c7bdbd">
+<h4 id="org9c7bdbd">Anidar elementos</h4>
+<div class="column" style="float:left; width: 45%">
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;Mi gato es &lt;strong&gt;muy&lt;/strong&gt; gruñon.&lt;/p&gt;
+</code></pre>
+</div>
+<p>
+Bien anidado
+</p>
+</div>
+
+<div class="column" style="float:right; width: 45%">
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;Mi gato es &lt;strong&gt;muy gruñon.&lt;/p&gt;&lt;/strong&gt;
+</code></pre>
+</div>
+<p>
+Mal Anidado
+</p>
+</div>
+
+</section>
+<section id="slide-orgd1b011a">
+<h4 id="orgd1b011a">Elementos vacíos</h4>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;img src="https://via.placeholder.com/600x500/ff0000" alt="imagen de relleno de color rojo"&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-orgfc6d4c6">
+<h4 id="orgfc6d4c6">Elementos en bloque VS en línea</h4>
+<ul>
+<li>Los <a href="https://developer.mozilla.org/es/docs/Web/HTML/Block-level_elements">elementos en bloque</a> ocupan todo el espacio del contenedor padre y comienzan nueva línea</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;Este párrafo es un elemento en bloque; este fondo se ha coloreado para mostrar elemento principal (o padre) del párrafo.&lt;/p&gt;
+</code></pre>
+</div>
+<div class="org-src-container">
+
+<pre   ><code class="css" >p { background-color: #8ABB55; }
+</code></pre>
+</div>
+<ul>
+<li>Los <a href="https://developer.mozilla.org/es/docs/Web/HTML/Inline_elements">elementos en línea</a> van en línea del anterior y no comienzan nueva línea</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;Este &lt;span&gt;span&lt;/span&gt; es un elemento en línea; este fondo se ha coloreado para mostrar el principio y fin de la influencia del elemento en línea&lt;/p&gt;
+</code></pre>
+</div>
+<div class="org-src-container">
+
+<pre   ><code class="css" >span { background-color: #8ABB55; }
+</code></pre>
+</div>
+</section>
+<section id="slide-org5c48b1a">
+<h4 id="org5c48b1a">Identificadores</h4>
+<ul>
+<li>Permite identificar un elemento único en una página HTML</li>
+<li>Solo se permite un único elemento por ID</li>
+<li>Sirven para hacer marcadores y saltar a esa parte de la página</li>
+<li><p>
+O para dar estilos desde CSS o tareas desde JS a un único elemento
+</p>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p id="mi-id"&gt;Esta frase tiene un ID único&lt;/p&gt;
+</code></pre>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-orgcf6d2e3">
+<h4 id="orgcf6d2e3">Elementos no semánticos</h4>
+<div class="outline-text-4" id="text-orgcf6d2e3">
+</div>
+<ul class="org-ul">
+<li><a id="orgc72705f"></a>Elemento en linea <code>&lt;span&gt;</code><br />
+<ul>
+<li>Se utiliza cuando no se nos ocurre el uso de ningún otro elemento semántico de texto en el que incluir el contenido</li>
+<li>O si no se desea añadir ningún significado específico</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;El carbunco &lt;span class="nota-traductor"&gt;(Nota del traductor: erróneamente llamado ántrax)&lt;/span&gt; en una enfermedad
+  causada por las esporas de una bacteria llamada Bacillus anthracis.&lt;/span&gt;
+</code></pre>
+</div>
+</li>
+<li><a id="org116667d"></a>Elemento de bloque <code>&lt;div&gt;</code><br />
+<ul>
+<li><p>
+Sirve para crear secciones o agrupar contenidos
+</p>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;div style="color: blue;"&gt;
+ &lt;h2&gt; Ejemplo de div y span &lt;/h2&gt;
+  &lt;p&gt;
+    Esto es un párrafo dentro de un div,
+    &lt;span style="color: red;"&gt; y esto un span dentro de un párrafo.&lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+</div></li>
+
+</ul>
+</li>
+</ul>
+</section>
+<section id="slide-orgfe7218f">
+<h3 id="orgfe7218f">Estructura documento HTML</h3>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Mi pagina de prueba&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src="images/firefox-icon.png" alt="Mi imagen de prueba"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-orgfe7218f-split">
+
+<h3>Estructura documento HTML</h3>
+<ul>
+<li><code class="src src-html">&lt;<span style="color: #51afef;">!DOCTYPE</span> html&gt;</code> Tipo de documento: HTML</li>
+<li><code class="src src-html">&lt;<span style="color: #c678dd;">html</span>&gt;&lt;/<span style="color: #c678dd;">html</span>&gt;</code> Encapsula todo el contenido de la página. Elemento raíz</li>
+<li><code class="src src-html">&lt;<span style="color: #c678dd;">head</span>&gt;&lt;/<span style="color: #c678dd;">head</span>&gt;</code> Contenedor de todo caquello que no es contenido visible</li>
+<li><code class="src src-html">&lt;<span style="color: #c678dd;">meta</span> <span style="color: #dcaeea;">charset</span>=<span style="color: #98be65;">"utf-8"</span>&gt;</code> Juego de caracteres</li>
+<li><code class="src src-html">&lt;<span style="color: #c678dd;">title</span>&gt;&lt;/<span style="color: #c678dd;">title</span>&gt;</code> Título de la página</li>
+<li><code class="src src-html">&lt;<span style="color: #c678dd;">body</span>&gt;&lt;/<span style="color: #c678dd;">body</span>&gt;</code> El contenido a mostrar a usuarixs</li>
+
+</ul>
+</section>
+<section id="slide-orgf6a2fd8">
+<h3 id="orgf6a2fd8">Marcado de texto</h3>
+<div class="outline-text-3" id="text-orgf6a2fd8">
+</div>
+</section>
+<section id="slide-org5c68bc7">
+<h4 id="org5c68bc7">Párrafos</h4>
+<ul>
+<li>Para párrafos simples de texto <code>&lt;p&gt;</code></li>
+<li>Una vez que tenemos el texto en párrafos y secciones comenzamos con el marcado de texto</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;Este es un simple parrafo&lt;/p&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-org6c21380">
+<h4 id="org6c21380">Encabezados</h4>
+<ul>
+<li>Hay 6 niveles de encabezado que van de <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;h1&gt;Mi título principal&lt;/h1&gt;
+&lt;h2&gt;Mi título de nivel superior&lt;/h2&gt;
+&lt;h3&gt;Mi subtítulo&lt;/h3&gt;
+&lt;h4&gt;Mi sub-subtítulo&lt;/h4&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-org3e62270">
+<h4 id="org3e62270">Listas</h4>
+<ul>
+<li>Hay dos tipos de listas:
+<ul>
+<li>Ordenadas <code>&lt;ol&gt;</code></li>
+<li>Desordenadas <code>&lt;ul&gt;</code></li>
+
+</ul></li>
+<li>Cada elemento de la lista se especifica con <code>&lt;li&gt;</code></li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;ul&gt;
+  &lt;li&gt;leche&lt;/li&gt;
+  &lt;li&gt;pan&lt;/li&gt;
+  &lt;li&gt;huevos&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Margaret Court&lt;/li&gt;
+  &lt;li&gt;Serena Williams&lt;/li&gt;
+  &lt;li&gt;Steffi Graf&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-orgb0294bc">
+<h4 id="orgb0294bc">Vínculos</h4>
+<ul>
+<li>Los vínculos son los que hacen de la web, la web. Se usan con <code>&lt;a&gt;</code> que viene de <i>anchor</i></li>
+<li>Para convertir texto dentro de un párrafo en un vínculo</li>
+<li>Para especificar a dónde va el vínculo se hace con el atributo <code>href:"url"</code></li>
+<li>Es importante indicar el protocolo delante: <code>http://</code> o <code>https://</code></li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;Encontrarás toda la información sobre el máster &lt;a href="https://mpvd.es"&gt;aquí&lt;/a&gt;&lt;/p&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-org9dd3293">
+<h4 id="org9dd3293">Importancia</h4>
+<ul>
+<li><code>em</code> realza la <i>importancia</i> del texto que encierra</li>
+<li><code>strong</code> realza la <b>máxima importancia</b> del texto que encierra</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;El concierto de &lt;em&gt;Rock Paradise&lt;/em&gt; tendrá lugar el día 24 de enero a las 19:30, será &lt;strong&gt;obligatorio presentar acreditación&lt;/strong&gt;&lt;/p&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-orgb7c00c7">
+<h4 id="orgb7c00c7">Cita</h4>
+<ul>
+<li>Con <code>&lt;blockquote&gt;</code> hacemos una cita textual de otro texto externo</li>
+<li>este elemento puede tener el atributo <code class="src src-html"><span style="color: #dcaeea;">cite</span>="url"</code> para enlazar la fuente</li>
+<li>Podemos indicar la autoría, documento o fuente de la cita con <code>&lt;cite&gt;</code></li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >Desde la &lt;cite&gt;OCU&lt;/cite&gt; señalan lo siguiente:
+&lt;blockquote cite="https://www.ocu.org/fincas-y-casas/glosario-inmobiliario/c/cooperativas-de-vivienda"&gt;Ahora mismo hay muy pocos supermercados y los cooperativistas muchas veces participan más por activismo que por conveniencia&lt;/blockquote&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-org15dc999">
+<h4 id="org15dc999">Abreviatura y acrónimo</h4>
+<ul>
+<li>Para abreviatura utilizamos <code>&lt;abbr&gt;</code></li>
+<li>Para un acrónimo o uso de siglas lo hacemos con <code>&lt;acronym&gt;</code></li>
+<li>En el atributo <code>title</code> podemos indicar el significado de esa abreviatura o acrónimo</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;El &lt;acronym title="World Wide Web Consortium"&gt;W3C&lt;/acronym&gt; es quien define el estándar &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; 
+</code></pre>
+</div>
+</section>
+<section id="slide-orgf0cc473">
+<h4 id="orgf0cc473">Definición</h4>
+<ul>
+<li>Para indicar una definición lo hacemos con <code>&lt;dfn&gt;</code></li>
+<li><p>
+El elemento que lo encierra es el contexto de la definición
+</p>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;A &lt;dfn id="def-validator"&gt;validator&lt;/dfn&gt; is a program that checks for syntax errors in code or documents.&lt;/p&gt;
+</code></pre>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-orgfa8c0bf">
+<h4 id="orgfa8c0bf">Inserción y borrado</h4>
+<ul>
+<li>Cuando queremos borrar o modificar contenido en una publicación realizada</li>
+<li>Con <code>&lt;ins&gt;</code> indicamos la modificicación y quedará subrayado</li>
+<li>Con <code>&lt;del&gt;</code> indicamos el borrado y quedará tachado</li>
+<li>En el atributo <code>cite</code> puede indicar la fuente por la que se realiza tal borrado o modificación</li>
+<li>Y con  <code>datetime</code> la fecha de la modificación</li>
+
+</ul>
+</section>
+<section id="slide-orgfa8c0bf-split">
+
+<h4>Inserción y borrado</h4>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;El origen del terremoto fue en la localidad de &lt;del cite="https://www.elperiodicomediterraneo.com/comarcas/2017/12/16/burriana-registra-terremoto-durante-madrugada-41423109.html"&gt;Burriana&lt;/del&gt; &lt;ins&gt;Lorca&lt;/ins&gt;.&lt;/p&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-org5c5ea81">
+<h4 id="org5c5ea81">Tiempo</h4>
+<ul>
+<li>El elemento <code>&lt;time&gt;</code> representa un periodo específico de tiempo</li>
+<li>Con el atributo <code>datetime</code> hacemos que este elemento sea <i>machine-readable</i></li>
+<li>Esto es una mejora para los resultados de motores de búsqueda o para funciones personalizadas como recordatorios</li>
+<li>Ver formatos válidos de indicar el tiempo <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#valid_datetime_values">aquí</a></li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;Celebramos el 40ª aniversario el próximo &lt;time datetime="2018-07-07"&gt;7 de julio&lt;/time&gt; en Toledo&lt;/p&gt;
+&lt;p&gt;El concierto empieza a las &lt;time datetime="20:00"&gt;20:00&lt;/time&gt; y podrás disfrutarlo durante&lt;time datetime="PT2H30M"&gt;2h 30m&lt;/time&gt;.&lt;/p&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-org0de69ae">
+<h3 id="org0de69ae">Preformateado de texto</h3>
+<ul>
+<li>Cuando queremos mostrar el texto preformateado y escrito tal y como lo hacemos en el HTML</li>
+<li>Se suele renderizar en el navegador con una fuente monoespaciada</li>
+<li>Se respetan los espacios en blanco</li>
+<li>Escape de caracter: <code>&lt;</code> (&amp;lt), <code>&gt;</code> (&amp;gt), <code>&amp;</code> (&amp;amp), <code>"</code> (&amp;quot) <a href="https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references">Ver más aquí</a></li>
+
+</ul>
+</section>
+<section id="slide-org0de69ae-split">
+
+<h3>Preformateado de texto</h3>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;pre&gt;
+    ___________________________
+&amp;lt; I'm an expert in my field. &amp;gt;
+    ---------------------------
+	\   ^__^
+	 \  (oo)\_______
+	    (__)\       )\/\
+		||----w |
+		||     ||
+&lt;/pre&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-org61f26ba">
+<h4 id="org61f26ba">Mostrar código</h4>
+<ul>
+<li>Para mostrar código podemos hacerlo con el elemento <code>&lt;code&gt;</code></li>
+<li>Normalmente se renderiza con fuente monoespaciada</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;p&gt;The function &lt;code&gt;selectAll()&lt;/code&gt; highlights all the text in the input field so the user can, for example, copy or delete the text.&lt;/p&gt;
+</code></pre>
+</div>
+<ul>
+<li>Si queremos mostrar multiples líneas de código podemos encerrarlo dentro de <code>&lt;pre&gt;</code></li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;pre&gt;
+  &lt;code&gt;
+     body {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+     }
+  &lt;/code&gt;
+&lt;/pre&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-org48b3dac">
+<h3 id="org48b3dac">Otros enlaces</h3>
+<ul>
+<li>Para enlazar con un script de javascript por ejemplo, podemos hacerlo con el elemento <code>&lt;script&gt;</code></li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;head&gt;
+  &lt;script type="text/javascript" src="http://www.ejemplo.com/js/inicializar.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+</div>
+<ul>
+<li>Con <code>&lt;script&gt;</code> también podemos escribir el código <i>JS</i> directamente en nuestro <i>HTML</i></li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;script type="text/javascript"&gt;
+  window.onload = function() { alert("La página se ha cargado completamente"); }
+&lt;/script&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-org48b3dac-split">
+<ul>
+<li>Si queremos enlazar con otros recursos, como por ejemplo una hoja de estilo <i>CSS</i>, podemos hacerlo con el elemento <code>&lt;link&gt;</code></li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;head&gt;
+  &lt;link rel="stylesheet" type="text/css" href="/css/style.css" /&gt;
+&lt;/head&gt;
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgeaa2307">
+<h2 id="orgeaa2307">Para el próximo día</h2>
+<ul>
+<li>Para la próxima sesión trae algún ejemplo de web cuyo propósito sea la comunicación de datos</li>
+<li>Puede ser una noticia, artículo, proyecto personal, etc.</li>
+<li>Inspecciona un poco cómo está hecha por dentro</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org2936342">
+<h2 id="org2936342">CSS</h2>
+<ul>
+<li><i>CSS</i> (Hojas de estilo en cascada) es el código que utilizamos para dar estilo a la web.</li>
+<li>Podemos dar color, tamaño al texto o el fondo de elementos, la maquetación de los mismos, etc.</li>
+<li>No es un lenguaje de programación ni de marcado. Es un lenguaje de hojas de estilo</li>
+<li>Permite aplicar estilos de manera selectiva o "en cascada" a elementos en el HTML</li>
+
+</ul>
+</section>
+<section id="slide-org2936342-split">
+<p>
+Si queremos cambiar el color de texto a todos los párrafos:
+</p>
+<div class="org-src-container">
+
+<pre   ><code class="css" >p {
+  color: red;
+}
+</code></pre>
+</div>
+</section>
+<section id="slide-org2936342-split">
+<p>
+Intenta averiguar qué color tendrá la frase "Hola Mundo!"
+</p>
+<div class="column" style="float:left; width: 45%">
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;body&gt;
+  &lt;div class="container"&gt;
+    &lt;p class="text"&gt;Hola mundo&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+</div>
+</div>
+<div class="column" style="float:right; width: 45%">
+<div class="org-src-container">
+
+<pre   ><code class="css" >body {
+  color: blue;
+}
+
+.container {
+  color: red;
+}
+
+p {
+  color: green;
+}
+</code></pre>
+</div>
+</div>
+</section>
+<section id="slide-orgc21a1df">
+<h3 id="orgc21a1df">Configuración</h3>
+<ul>
+<li>Para que tengan efectos estos estilos tenemos que guardarlo en un archivo <code>.css</code></li>
+<li>Y además tendremos que vincular este archivo desde el html entre las etiquetas <code>&lt;head&gt;</code> y <code>&lt;/head&gt;</code></li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;link href="assets/css/style.css" rel="stylesheet" type="text/css"&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-orgc21a1df-split">
+
+<h3>Configuración</h3>
+<ul>
+<li>También puede ser una hoja de estilo interna y que se indique dentro de las etiquetas <code>&lt;style&gt;&lt;/style&gt;</code> dentro del html</li>
+<li>O puede ser un estilo en línea que sólo afectan a un elemento HTML, aunque no es muy recomendable trabajar así</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="html" >&lt;h1 style="color: blue;background-color: yellow;border: 1px solid black;"&gt;¡Hola mundo!&lt;/h1&gt;
+</code></pre>
+</div>
+</section>
+<section id="slide-org9f40cb0">
+<h3 id="org9f40cb0">Estructura</h3>
+
+<div id="orgfbf0789" class="figure">
+<p><img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" alt="css-declaration-small.png" height="300px" display="block" />
+</p>
+<p><span class="figure-number">Figura 3: </span>Partes de una regla CSS. Fuente: <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics">Mozilla</a></p>
+</div>
+</section>
+<section id="slide-org95a9482">
+<h3 id="org95a9482">Sintaxis</h3>
+<ul>
+<li>Cada una de las reglas deben estar encapsuladas entre llaves "<code>{}</code>"</li>
+<li>Usar los dos puntos "<code>:</code>" para separar la propiedad de su valor</li>
+<li>Usar el punto y coma "<code>;</code>" para separar una declaración de la siguiente</li>
+
+</ul>
+<div class="org-src-container">
+
+<pre   ><code class="css" >p {
+  color: red;
+  width: 500px;
+  border: 1px solid black;
+}
+</code></pre>
+</div>
+</section>
+<section id="slide-org95a9482-split">
+<p>
+Para seleccionar varios elementos
+</p>
+<div class="org-src-container">
+
+<pre   ><code class="css" >p, li, h1 {
+  color: red;
+}
+</code></pre>
+</div>
+</section>
+<section id="slide-org570205b">
+<h3 id="org570205b">Cajas</h3>
+<ul>
+<li>Podemos pensar los elementos HTML como cajas apiladas una sobre otra</li>
+<li>Cada caja tiene una serie de propiedades como estas:
+<ul>
+<li><code>padding</code> (relleno), el espacio alrededor del contenido</li>
+<li><code>border</code> (marco), la línea que se encuentra fuera del relleno</li>
+<li><code>margin</code> (margen), el espacio fuera del elemento que lo separa de los demás</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org570205b-split">
+
+<div id="orgeb5e561" class="figure">
+<p><img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/box-model.png" alt="box-model.png" height="300px" display="block" />
+</p>
+<p><span class="figure-number">Figura 4: </span>Ejemplo de propiedades CSS. Fuente: <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics#cajas_cajas_todo_se_trata_de_cajas">Mozilla</a></p>
+</div>
+
+</section>
+<section id="slide-orge16150a">
+<h3 id="orge16150a">Tipos de selectores</h3>
+<ul>
+<li>De elemento: <code>p</code>, <code>h1</code>, <code>ul</code>, etc.</li>
+<li>De identificación: <code>#mi-id</code></li>
+<li>De clase: <code>.mi-clase</code></li>
+<li>De atributo: <code>img[src]</code></li>
+<li>De pseudoclase, sólo cuando esté en el estado especificado: <code>a:hover</code></li>
+
+</ul>
+</section>
+<section id="slide-orgf9fe7f3">
+<h4 id="orgf9fe7f3">Por Operadores de combinación</h4>
+<ul>
+<li>Descendentes: <code>div span</code></li>
+<li>De elementos hijo: <code>article &gt; p</code></li>
+<li>De elementos hermanos adyacentes: <code>h1 + p</code></li>
+<li>general de elementos hermanos: <code>h1 ~ p</code></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org55a00f8">
+<h2 id="org55a00f8"><span class="todo TODO">TODO</span> JavaScript</h2>
+</section>
+</section>
+<section>
+<section id="slide-org223856d">
+<h2 id="org223856d">Manuales / Docs</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/es/docs/Learn/HTML">https://developer.mozilla.org/es/docs/Learn/HTML</a></li>
+<li><a href="https://www.w3schools.com/html/default.asp">https://www.w3schools.com/html/default.asp</a></li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js-copycode@1.0.2/plugin/copycode/copycode.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+plugins: [RevealHighlight, CopyCode]
+});
+
+</script>
+<script src="../../assets/js/custom.js"></script>
+</body>
+</html>
