@@ -18,6 +18,7 @@ En el [repositorio](https://github.com/mpvdes/uah2223-sistemas-interactivos-red)
 ## Ejercicios
 
 -   [Ejercicio 1: marcado de texto](practicas/e1-marcado.md)
+-   TODO Ejercicio 2: web con estilos
 
 ---
 
