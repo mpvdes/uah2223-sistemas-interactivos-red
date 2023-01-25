@@ -1,0 +1,204 @@
+#+STARTUP: indent
+#+STARTUP: overview
+
+:REVEAL_PROPERTIES:
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: simple
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+OPTIONS: timestamp:nil toc:1 num:nil author:nil date:nil
+:END:  
+
+#+TITLE:S0.Introducción
+#+SUBTITLE: M4.Sistemas Interactivos
+#+AUTHOR: Julián Pérez
+#+DATE: 19-01-23
+#+LANGUAGE: es
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+REVEAL_PLUGINS: (highlight CopyCode)
+#+REVEAL_HIGHLIGHT_CSS: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/base16/espresso.min.css
+#+REVEAL_EXTRA_CSS: ../../assets/css/modifications.css
+#+REVEAL_EXTRA_CSS: ../../assets/fonts/webfont-iosevka-11.3.0/iosevka.css
+#+REVEAL_EXTRA_SCRIPT_SRC: ../../assets/js/custom.js
+#+REVEAL_TITLE_SLIDE: <h1 class="title" style="text-transform:uppercase;font-size:2em" >%t</h1><h3 class="subtitle">%s</h3><br><br><h4>%a</h4><br><p>Máster Periodismo y Visualización de Datos</p><p>Universidad de Alcalá</p>
+#+OPTIONS: toc:nil
+
+* Índice
+  - [[Temario][Temario]]
+  - [[Cronograma][Cronograma]]
+  - [[Evaluación][Evaluación]]
+* Introducción
+- Desarrollar _aplicaciones interactivas web_ con propósitos de presentación de datos
+- Comprender _usabilidad, universalidad y accesibilidad web_
+- Técnicas y métodos para una comunicación efectiva en el medio digital
+- Otros formatos transmedia: bot
+* Temario
+** Web
+- Los tres pilares para la construcción de una web: *HTML, CSS, JS*
+- Diseño Responsivo con *Bootstrap*
+- Web interactiva con *Scrollytelling* y otros recursos
+** Buenas prácticas
+- Accesibilidad
+- Usabilidad
+- Multidispositivo
+- Metadatos, SEO
+** Práctica
+- Web en Github Pages
+- Bot en twitter o mastodon
+* Cronograma
+** Primera semana
+| Sesión | Tema   | Quién         | Fecha    |
+|--------+--------+---------------+----------|
+| S1     | Clase  | Julián Pérez  | 19/01/23 |
+| CH1    | Charla | Bani Brusadin | 20/01/23 |
+
+** Segunda semana
+| Sesión | Tema   | Quién             | Fecha    |
+|--------+--------+-------------------+----------|
+| CH2    | Charla | Miren Berasategui | 23/01/23 |
+| S2     | Clase  | Julián Pérez      | 24/01/23 |
+| S3     | Clase  | ?                 | 25/01/23 |
+| S4     | Clase  | Julián Pérez      | 26/01/23 |
+** Tercera semana
+| Sesión | Tema   | Quién          | Fecha            |
+|--------+--------+----------------+------------------|
+| CH3    | Charla | Ferrán Morales | 30/01/23 |
+| S5     | Clase  | Julián Pérez   | 31/01/23 |
+| S6     | Clase  | ?              | 01/02/23 |
+| S7     | Clase  | Julián Pérez   | 02/02/23 |
+| T1     | Taller | Adrián Blanco  | 03/02/23 |
+** Cuarta semana
+| Sesión | Tema  | Quién        | Fecha    |
+|--------+-------+--------------+----------|
+| S8     | Clase | Julián Pérez | 04/02/23 |
+| S9     | Clase | Julián Pérez | 05/02/23 |
+| S10    | Clase | Julián Pérez | 06/02/23 |
+
+* Evaluación
+- Se trata de una evaluación continua, el progreso se irá viendo en
+  las sesiones prácticas que conforman el módulo
+- Las prácticas a entregar serán:
+  - *Web* en la que se recoja todo lo que hayamos ido desarrollando
+  - *Bot* que realizaremos en el módulo
+* Siguiente ->                                                     :noexport:
+   :PROPERTIES:
+   :reveal_background: #FFCC00
+   :END:
+#+REVEAL_HTML: <a href="https://julianprz.gitlab.io/programacion-creativa-21-22/main/docs/01_Processing/03-formas-simples-personalizadas.html" class="r-fit-text" target="_blank">3-Formas simples / personalizadas</h2>
+* Template                                                         :noexport:
+** Índice
+# Generar TOC
+# org-reveal-manual-toc
+** Indice 2 columnas
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+#+REVEAL_HTML: </div>
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+#+REVEAL_HTML: </div>
+** 2 Columnas imagen
+#+REVEAL_HTML: <div class="column" style="float:left; width: 45%">
+#+attr_html: :heigh 200px :display block
+#+caption: 
+[[../../img/02/]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 45%">
+#+attr_html: :height 290px :display block
+#+CAPTION:
+[[../../img/02/]]
+#+REVEAL_HTML: </div>
+** 2 Columnas código
+#+REVEAL_HTML: <div class="column" style="float:left; width: 45%">
+#+begin_src arduino
+#+end_src
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 45%">
+#+begin_src arduino
+#+end_src
+#+REVEAL_HTML: </div>
+ 
+** 3 Columnas
+#+REVEAL_HTML: <div class="column" style="float:left; width: 33%">
+#+attr_html: :heigh 200px :display block
+#+caption: 
+[[../../img/]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 33%">
+#+attr_html: :height 290px :display block
+#+CAPTION:
+[[../../img/]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 33%">
+#+attr_html: :height 290px :display block
+#+CAPTION:
+[[../../img/]]
+#+REVEAL_HTML: </div>
+
+** 1 imagen
+#+attr_html: :height 400px :display block
+#+caption: 
+[[../../img/02/]]
+
+** SVG
+#+HTML: <img src="https://processing.org/a9c1aea53d4f4788062d226affba4b4d/objects.svg" width="500"/>
+** export processing code                                         :noexport:
+#+begin_src processing :tangle no ../../code/04/sketch_00_example/sketch_00_example.pde :mkdirp yes
+
+#+end_src
+# org-babel-tangle
+# Tangle the current file. Bound to C-c C-v t.
+# Tangle the current code block. C-u C-c C-v C-t
+# With prefix argument only tangle the current code block.
+
+** inline processing code                                         :noexport:
+# src_processing[:exports code]{;}
+
+** Symbols
+- \downarrow
+  
+* Contents                                                         :noexport:
+** Sistemas interactivos
+- https://www.encyclopedia.com/computing/news-wires-white-papers-and-books/interactive-systems
+- 
+** Web
+*** Responsive Design
+- https://mdo.github.io/table-grid/
+** Scrollytelling
+** Publicación
+** Accesibilidad
+- https://amarachijohnson.com/a-beginners-guide-to-web-accessibility-ckelka23j00cd8cs10h24byf7?utm_content=139523215&utm_medium=social&hss_channel=tw-1120244738&utm_source=twitter&utm_campaign=accessibility
+- WAI: https://www.w3.org/WAI/
+- ARIA: Accesible Rich Internet Applications
+  - https://developer.mozilla.org/es/docs/Web/Accessibility/ARIA
+  - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
+  - https://briefs.video/videos/what-is-aria-even-for/
+  - 
+- Acces.: https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94
+- Color
+  - https://contrast-ratio.com/
+  - https://contrastchecker.com/
+  - https://stephaniewalter.design/blog/color-accessibility-tools-resources-to-design-inclusive-products/
+  - https://jxnblk.github.io/colorable/demos/matrix/
+  - https://contrast-ratio.com/
+- Imagen:
+  - Alt
+- Focus state
+  - 
+- Etiquetas en los forms
+- ScreeReaders
+  - https://www.nvaccess.org/download/
+** Universalidad
+- https://www.amberscript.com/es/blog/internet-universalidad-definicion/
+** SEO
+- https://cards-dev.twitter.com/validator
+- https://developers.facebook.com/tools/debug
+- https://developers.google.com/search/docs/advanced/structured-data0
+- https://ogp.me/
+- 
+** UX
+- https://lawsofux.com/
+** 

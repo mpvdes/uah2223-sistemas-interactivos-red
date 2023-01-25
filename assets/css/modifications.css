@@ -1,0 +1,129 @@
+.reveal ul,ol,p,pre {
+    font-family: "Iosevka Web", "Fira Sans", sans-serif;
+    font-size: 0.8em;
+    }
+.reveal ul{
+    line-height: 1.5;
+}
+
+.reveal code.hljs{
+    font-family: "Iosevka Web", "Fira Sans", monospace;
+    font-size: 0.7em;
+    line-height:1.5;
+}
+.reveal code:not(.bash):not(.css):not(.processing):not(.arduino):not(.html){
+    font-family: "Iosevka Web", "Fira Sans", monospace;
+    color: HotPink;
+}
+
+.reveal a{
+    font-family: "Iosevka Web", "Fira Sans", sans-serif;
+    color: DodgerBlue;
+}
+
+.reveal a:hover{
+    color: RoyalBlue;
+}
+
+.reveal b {
+   /* color:#cdd7d7; */
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: "Iosevka Web", "Fira Sans", sans-serif;
+  /* margin: 0 0 20px 0; */
+  /* color: #eee8d5; */
+  /* line-height: 0.9em; */
+  /* letter-spacing: 0.02em; */
+  /* text-transform: uppercase; */
+  /* text-shadow: none; */
+}
+
+.reveal table{
+    line-height: 1.2;
+    font-size:0.7em;
+    font-family: "Iosevka Web", "Fira Sans", sans-serif;
+}
+#left {
+	margin: 10px 0 15px 20px;
+	text-align: left;
+	float: left;
+	z-index:-10;
+	width:48%;
+	font-size: 0.85em;
+	line-height: 1.5; 
+}
+
+#right {
+	margin: 10px 0 15px 0;
+	float: right;
+	text-align: left;
+	z-index:-10;
+	width:48%;
+	font-size: 0.85em;
+	line-height: 1.5; 
+}
+
+.figure p {
+    font-family: "Iosevka Web", "Fira Sans", sans-serif;
+    font-size: 0.6em;
+}
+
+.org-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* CSS Copycode style */
+
+.reveal pre, .codeblock {
+  width: 100%; }
+
+.codeblock {
+  margin: 20px auto;
+  position: relative; }
+
+/* .codeblock pre { */
+/*   margin: 0; */
+/*   width: 100%; */
+/*   font-size: 1rem; } */
+
+.codeblock > button {
+  opacity: 0.5;
+  z-index: 1;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: orange;
+  color: black;
+  border: 0;
+  margin: 0;
+  padding: .2em .5em;
+  font-family: "Iosevka Web", "Fira Sans", sans-serif;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 0.25s ease-in-out, opacity .25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out, opacity .25s ease-in-out;
+  transition: background-color 0.25s ease-in-out, opacity .25s ease-in-out;
+  cursor: pointer; }
+
+.codeblock > button:hover, pre > button:hover {
+  opacity: 1; }
+
+.codeblock > button[disabled] {
+  opacity: 1;
+  background: green;
+  color: white;
+  cursor: default; }
+
+.codeblock > button:focus {
+  outline: 0; }
