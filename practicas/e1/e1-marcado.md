@@ -8,5 +8,5 @@
 -   Es una noticia inventada sobre la plataforma TikTok
 -   El documento a entregar será un archivo `.html`
 -   Indica un prefijo con tu nombre. Por ejemplo: "*juan-e1-marcado.html*"
--   La entrega la puedes hacer en el aula virtual en
+-   La entrega la puedes hacer en el [aula virtual](https://uah.blackboard.com/ultra/courses/_30740_1/cl/outline)
 
