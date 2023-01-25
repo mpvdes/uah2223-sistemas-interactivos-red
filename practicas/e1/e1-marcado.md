@@ -9,4 +9,5 @@
 -   El documento a entregar será un archivo `.html`
 -   Indica un prefijo con tu nombre. Por ejemplo: "*juan-e1-marcado.html*"
 -   La entrega la puedes hacer en el [aula virtual](https://uah.blackboard.com/ultra/courses/_30740_1/cl/outline)
+-   Fecha de entrega: <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-01 mié&gt;</span></span>
 
