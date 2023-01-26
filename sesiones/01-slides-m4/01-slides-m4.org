@@ -25,25 +25,10 @@
 #+OPTIONS: toc:nil
 
 * Índice
-#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
   - [[HTML][HTML]]
-    - [[Manejo de archivos][Manejo de archivos]]
-    - [[Elementos HTML][Elementos HTML]]
-    - [[Estructura documento HTML][Estructura documento HTML]]
-    - [[Marcado de texto][Marcado de texto]]
-    - [[Preformateado de texto][Preformateado de texto]]
-    - [[Otros enlaces][Otros enlaces]]
   - [[CSS][CSS]]
-    - [[Configuración][Configuración]]
-    - [[Estructura][Estructura]]
-    - [[Sintaxis][Sintaxis]]
-    - [[Cajas][Cajas]]
-    - [[Tipos de selectores][Tipos de selectores]]
-#+REVEAL_HTML: </div>
-#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
   - [[JavaScript][JavaScript]]
   - [[Manuales / Docs][Manuales / Docs]]
-#+REVEAL_HTML: </div>
 * Resumen
   - Haremos una introducción básica a los elementos que componen una web
   - Para qué sirve cada elemento HTML
