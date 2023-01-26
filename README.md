@@ -8,6 +8,8 @@ Alcalá](https://mpvd.es).
 
 En el [repositorio](https://github.com/mpvdes/uah2223-sistemas-interactivos-red) podrás encontrar todos los materiales.
 
+Puedes repasar estos [apuntes](sesiones/apuntes.md) sobre atajos de teclado y configuraciones
+
 
 ## Slides
 

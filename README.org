@@ -8,6 +8,7 @@ Alcalá]].
 
 En el [[https://github.com/mpvdes/uah2223-sistemas-interactivos-red][repositorio]] podrás encontrar todos los materiales.
 
+Puedes repasar estos [[file:sesiones/apuntes.md][apuntes]] sobre atajos de teclado y configuraciones
 ** Slides
 - [[https://mpvdes.github.io/uah2223-sistemas-interactivos-red/sesiones/00-intro/00-intro.html][Introducción asignatura]]
 - [[https://mpvdes.github.io/uah2223-sistemas-interactivos-red/sesiones/01-slides-m4/01-slides-m4.html][Intro Web]]
@@ -18,3 +19,4 @@ En el [[https://github.com/mpvdes/uah2223-sistemas-interactivos-red][repositorio
 
 -----
 [[./img/logo.svg]]
+

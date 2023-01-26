@@ -1,20 +1,7 @@
 
-# Table of Contents
-
-1.  [Atajos de teclado nano](#orgbf997f9)
-2.  [Configuraciones nano](#orga48eeea)
-3.  [Atajos de teclado emacs](#orgfb57655)
-4.  [Configuraciones emacs](#orgc411838)
-    1.  [web-mode.el](#org8848357)
-    2.  [](#orge652ee8)
-
-
-<a id="orgbf997f9"></a>
 
 # Atajos de teclado nano
 
-
-<a id="orga48eeea"></a>
 
 # Configuraciones nano
 
@@ -32,17 +19,11 @@ Estas configuraciones las indicamos en nuestro archivo de configuración de nano
     set softwrap
 
 
-<a id="orgfb57655"></a>
-
 # Atajos de teclado emacs
 
 
-<a id="orgc411838"></a>
-
 # Configuraciones emacs
 
-
-<a id="org8848357"></a>
 
 ## web-mode.el
 
@@ -63,8 +44,6 @@ Estas configuraciones las indicamos en nuestro archivo de configuración de nano
         
         (global-set-key (kbd "C-c y") 'web-mode-yank)
 
-
-<a id="orge652ee8"></a>
 
 ## 
 
