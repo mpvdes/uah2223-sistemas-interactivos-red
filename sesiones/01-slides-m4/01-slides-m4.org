@@ -35,10 +35,13 @@
   - Cómo se dan estilos a través de CSS
   - Cómo podemos crear tareas o cambiar el comportamiento de los elementos a través de JS
 * HTML
+:PROPERTIES:
+:reveal_background: #e34c26
+:END:
 - /HTML/ viene de HyperText Markup Language o lenguaje de marcado de hipertexto
 - Es el componente más básico de la Web y define el _significado_ y la _estructura_ del contenido web.
 - Para la _apariencia_ contamos con /CSS/ y para la _funcionalidad_ con /JavaScript/
-#+reveal: split:t
+#+reveal: split
 - Utiliza marcas para etiquetar texto, imágenes y otros contenidos para mostrarlos en un navegador web.
 - Estas marcas incluyen elementos especiales como =<head>=, =<title>=, =<body>=, =<header>=, =<footer>=, =<article>=, =<section>=, =<p>=, =<img>=, =<div>=, =<span>=, etc.
 ** Manejo de archivos
@@ -288,11 +291,14 @@ Desde la <cite>OCU</cite> señalan lo siguiente:
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
 #+end_src
-* Para el próximo día
+* Para el próximo día :noexport:
 - Para la próxima sesión trae algún ejemplo de web cuyo propósito sea la comunicación de datos
 - Puede ser una noticia, artículo, proyecto personal, etc.
 - Inspecciona un poco cómo está hecha por dentro
 * CSS
+:PROPERTIES:
+:reveal_background: #264de4
+:END:
 - /CSS/ (Hojas de estilo en cascada) es el código que utilizamos para dar estilo a la web.
 - Podemos dar color, tamaño al texto o el fondo de elementos, la maquetación de los mismos, etc.
 - No es un lenguaje de programación ni de marcado. Es un lenguaje de hojas de estilo
@@ -364,17 +370,6 @@ p, li, h1 {
   color: red;
 }
 #+end_src
-** Cajas
-- Podemos pensar los elementos HTML como cajas apiladas una sobre otra
-- Cada caja tiene una serie de propiedades como estas:
-  - =padding= (relleno), el espacio alrededor del contenido
-  - =border= (marco), la línea que se encuentra fuera del relleno
-  - =margin= (margen), el espacio fuera del elemento que lo separa de los demás
-#+reveal: split
-#+attr_html: :height 300px :display block
-#+caption: Ejemplo de propiedades CSS. Fuente: [[https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics#cajas_cajas_todo_se_trata_de_cajas][Mozilla]]
-https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/box-model.png
-
 ** Tipos de selectores
 - De elemento: =p=, =h1=, =ul=, etc.
 - De identificación: =#mi-id=
@@ -386,7 +381,97 @@ https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_
 - De elementos hijo: =article > p=
 - De elementos hermanos adyacentes: =h1 + p=
 - general de elementos hermanos: =h1 ~ p= 
+** Cajas (Box model)
+- Podemos pensar los elementos HTML como cajas apiladas una sobre otra
+- Cada caja tiene una serie de propiedades como estas:
+  - =padding= (relleno), el espacio alrededor del contenido
+  - =border= (marco), la línea que se encuentra fuera del relleno
+  - =margin= (margen), el espacio fuera del elemento que lo separa de los demás
+#+reveal: split
+#+attr_html: :height 300px :display block
+#+caption: Ejemplo de propiedades CSS. Fuente: [[https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics#cajas_cajas_todo_se_trata_de_cajas][Mozilla]]
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/box-model.png
+** Fuentes
+- Para dar estilo al texto también podemos hacerlo utilizando diferentes fuentes o tipografías
+- Para utilizar una fuente desde CSS lo podemos hacer con la propiedad =font-family=
+- El navegador sólo podrá utilizar las tipografías que tengamos instaladas en el sistema
+- Existe un listado de [[https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#font_families][fuentes web seguras]]
+#+begin_src css
+p {
+  font-family: arial;
+}
+#+end_src
+** Webfonts
+Si queremos utilizar una tipografía online o webfont, tenemos varios métodos:
+ - Con =@font-face= (CSS)
+#+begin_src css
+  @font-face {
+    font-family: myFont;
+    src: url("url de la webfont");
+    font-weight: bold; 
+  }
+  
+  p {
+      font-family: myFont;
+  }
+#+end_src
+#+reveal: split:t
+  - Con =@import= Es el metodo para importar otros recursos locales o externos. Tiene que ir al inicio del CSS
+#+begin_src css
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+p {
+    font-family: 'Roboto', sans-serif;
+}
+#+end_src
+#+reveal: split:t
+  - Con =<link>= (HTML)
+#+begin_src html
+ <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/futura-renner" type="text/css"/> 
+#+end_src
+#+begin_src css
+ p {
+   font-family: 'FuturaRennerRegular';
+   font-weight: normal;
+   font-style: normal;
+}
+#+end_src
+* Bootstrap
+:PROPERTIES:
+:reveal_background: #6F2BF5
+:END:
+- Bootstrap es un /framework/ de diseño web y es de código abierto
+- Contiene plantillas de diseño web: tipografías, botones, formularios, menús, etc.
+- Estas plantillas son básicamente HTML y CSS, y algunos componentes requieren de JS
+- Desarrollado desde la estrategia /mobile first/
+** Empezamos!
+- Primero comenzamos con el index.html
+#+begin_src html
+<!doctype html>
+<html lang="en">
+  ...
+</html>
+#+end_src
+** Queremos un diseño responsivo
+- Con la etiqueta viewport meta indicamos que se adapte para móviles
+#+begin_src html
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Mi página en Bootstrap</title>
+    </head>
+#+end_src
+- Hacemos una prueba para ver la diferencia.
+** TODO Enlazamos el CSS y JS de Bootstrap
+- Vamos a enlazar a unos archivos CSS y JS en local descargados en la raiz de nuestro proyecto
+- Primero indicamos el enlace al archivo CSS dentro de =<head>=
+#+begin_src html
+
+#+end_src
+
 * TODO JavaScript
+:PROPERTIES:
+:reveal_background: #f0db4f
+:END:
 * Manuales / Docs
 - https://developer.mozilla.org/es/docs/Learn/HTML
 - https://www.w3schools.com/html/default.asp 
