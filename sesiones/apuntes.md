@@ -5,7 +5,7 @@
 
 # Configuraciones nano
 
-Estas configuraciones las indicamos en nuestro archivo de configuración de nano ".nanorc"
+Estas configuraciones las indicamos en nuestro archivo de configuración de nano "*.nanorc*"
 
     ## Establezco tamaño de tabulación en dos espacios
     set tabsize 2
@@ -28,7 +28,7 @@ Estas configuraciones las indicamos en nuestro archivo de configuración de nano
 ## web-mode.el
 
 -   Este modo nos ayuda a trabajar los archivos HTML
--   Instalamos paquete con `M-x package-install`
+-   Instalamos paquete con **"<kbd>texto</kbd>"** M-x `package-install`
 -   le indicamos "web-mode"
 -   Añadimos lo siguiente en nuestro *init.el*
     

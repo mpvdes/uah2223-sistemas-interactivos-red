@@ -6,7 +6,7 @@
 #+REVEAL_THEME: simple
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 #+OPTIONS: timestamp:nil toc:1 num:nil author:nil date:nil
-:END:  
+:END:
 
 #+TITLE:Introducción Web
 #+SUBTITLE: M4.Sistemas Interactivos
@@ -25,15 +25,17 @@
 #+OPTIONS: toc:nil
 
 * Índice
-  - [[HTML][HTML]]
-  - [[CSS][CSS]]
-  - [[JavaScript][JavaScript]]
-  - [[Manuales / Docs][Manuales / Docs]]
+- [[HTML][HTML]]
+- [[CSS][CSS]]
+- [[Bootstrap][Bootstrap]]
+- [[Github Pages][Github Pages]]
+- [[JavaScript][JavaScript]]
+- [[Manuales / Docs][Manuales / Docs]]
 * Resumen
-  - Haremos una introducción básica a los elementos que componen una web
-  - Para qué sirve cada elemento HTML
-  - Cómo se dan estilos a través de CSS
-  - Cómo podemos crear tareas o cambiar el comportamiento de los elementos a través de JS
+- Haremos una introducción básica a los elementos que componen una web
+- Para qué sirve cada elemento HTML
+- Cómo se dan estilos a través de CSS
+- Cómo podemos crear tareas o cambiar el comportamiento de los elementos a través de JS
 * HTML
 :PROPERTIES:
 :reveal_background: #e34c26
@@ -45,53 +47,53 @@
 - Utiliza marcas para etiquetar texto, imágenes y otros contenidos para mostrarlos en un navegador web.
 - Estas marcas incluyen elementos especiales como =<head>=, =<title>=, =<body>=, =<header>=, =<footer>=, =<article>=, =<section>=, =<p>=, =<img>=, =<div>=, =<span>=, etc.
 ** Manejo de archivos
-- Es importante que la estructura de los archivos en una carpeta local de tu ordenador sea la misma que después tendrá cuando se aloje en un servidor
-- Esta carpeta será la raíz "=/=" de tu web futura
-- Es importante mantener la disciplina de escribir en *minúscula y sin espacios* para el nombrado de archivos
-- Para separar nombres *utilizamos el guión medio* "=-=" pero no la barra baja "=_="
-#+reveal: split:t
-#+begin_src bash
-mi-proyecto-web/
-├── assets
-│   ├── css
-│   │   ├── custom.css
-│   │   └── style.css
-│   └── js
-│       └── custom.js
-├── img
-│   └── paisaje.jpg
-└── index.html
-#+end_src
+    - Es importante que la estructura de los archivos en una carpeta local de tu ordenador sea la misma que después tendrá cuando se aloje en un servidor
+    - Esta carpeta será la raíz "=/=" de tu web futura
+    - Es importante mantener la disciplina de escribir en *minúscula y sin espacios* para el nombrado de archivos
+    - Para separar nombres *utilizamos el guión medio* "=-=" pero no la barra baja "=_="
+    #+reveal: split:t
+    #+begin_src bash
+    mi-proyecto-web/
+    ├── assets
+    │   ├── css
+    │   │   ├── custom.css
+    │   │   └── style.css
+    │   └── js
+    │       └── custom.js
+    ├── img
+    │   └── paisaje.jpg
+    └── index.html
+    #+end_src
 ** Elementos HTML
 *** Qué es un elemento HTML?
-#+attr_html: :height 200px :display block
-#+caption: Partes de un elemento HTML. Fuente: [[https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics][Mozilla]]
-https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-small.png
+    #+attr_html: :height 200px :display block
+    #+caption: Partes de un elemento HTML. Fuente: [[https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics][Mozilla]]
+    https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-small.png
 
 *** Atributo HTML
-#+attr_html: :height 100px :display block
-#+caption: Atributo del elemento HTML. Fuente: [[https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics][Mozilla]]
-https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-attribute-small.png
+    #+attr_html: :height 100px :display block
+    #+caption: Atributo del elemento HTML. Fuente: [[https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics][Mozilla]]
+    https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-attribute-small.png
 
 *** Anidar elementos
-#+REVEAL_HTML: <div class="column" style="float:left; width: 45%">
+    #+REVEAL_HTML: <div class="column" style="float:left; width: 45%">
 #+begin_src html
-  <p>Mi gato es <strong>muy</strong> gruñon.</p>
+<p>Mi gato es <strong>muy</strong> gruñon.</p>
 #+end_src
-Bien anidado
-#+REVEAL_HTML: </div>
+    Bien anidado
+    #+REVEAL_HTML: </div>
 
-#+REVEAL_HTML: <div class="column" style="float:right; width: 45%">
+    #+REVEAL_HTML: <div class="column" style="float:right; width: 45%">
 #+begin_src html
-  <p>Mi gato es <strong>muy gruñon.</p></strong>
+<p>Mi gato es <strong>muy gruñon.</p></strong>
 #+end_src
 Mal Anidado
 #+REVEAL_HTML: </div>
 
 *** Elementos vacíos
-#+begin_src html
-<img src="https://via.placeholder.com/600x500/ff0000" alt="imagen de relleno de color rojo">
-#+end_src
+	#+begin_src html
+	<img src="https://via.placeholder.com/600x500/ff0000" alt="imagen de relleno de color rojo">
+	#+end_src
 *** Elementos en bloque VS en línea
 - Los [[https://developer.mozilla.org/es/docs/Web/HTML/Block-level_elements][elementos en bloque]] ocupan todo el espacio del contenedor padre y comienzan nueva línea
 #+begin_src html
@@ -106,40 +108,41 @@ Mal Anidado
 - Solo se permite un único elemento por ID
 - Sirven para hacer marcadores y saltar a esa parte de la página
 - O para dar estilos desde CSS o tareas desde JS a un único elemento
-  #+begin_src html
+#+begin_src html
 <p id="mi-id">Esta frase tiene un ID único</p>
-  #+end_src
+#+end_src
 *** Elementos no semánticos
 **** Elemento en linea =<span>=
 - Se utiliza cuando no se nos ocurre el uso de ningún otro elemento semántico de texto en el que incluir el contenido
 - O si no se desea añadir ningún significado específico
 #+begin_src html
-    <p>El carbunco <span class="nota-traductor">(Nota del traductor: erróneamente llamado ántrax)</span> en una enfermedad
-      causada por las esporas de una bacteria llamada Bacillus anthracis.</span>
+  <p>El carbunco <span class="nota-traductor">(Nota del traductor:
+  erróneamente llamado ántrax)</span> en una enfermedad causada por las
+  esporas de una bacteria llamada Bacillus anthracis.</span>
 #+end_src
 **** Elemento de bloque =<div>=
 - Sirve para crear secciones o agrupar contenidos
-  #+begin_src html
-<div style="color: blue;">
- <h2> Ejemplo de div y span </h2>
-  <p>
-    Esto es un párrafo dentro de un div,
-    <span style="color: red;"> y esto un span dentro de un párrafo.</span>
-  </p>
-</div>
-  #+end_src
+#+begin_src html
+  <div style="color: blue;">
+      <h2> Ejemplo de div y span </h2>
+      <p>
+          Esto es un párrafo dentro de un div,
+          <span style="color: red;"> y esto un span dentro de un párrafo.</span>
+      </p>
+  </div>
+#+end_src
 ** Estructura documento HTML
 #+begin_src html
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="utf-8">
-      <title>Mi pagina de prueba</title>
-    </head>
-    <body>
-      <img src="images/firefox-icon.png" alt="Mi imagen de prueba">
-    </body>
-  </html>
+          <!DOCTYPE html>
+          <html>
+              <head>
+                  <meta charset="utf-8">
+                  <title>Mi pagina de prueba</title>
+              </head>
+              <body>
+                  <img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+              </body>
+          </html>
 #+end_src
 #+reveal: split:t
 - src_html[:exports code]{<!DOCTYPE html>} Tipo de documento: HTML
@@ -162,60 +165,60 @@ Mal Anidado
   <h2>Mi título de nivel superior</h2>
   <h3>Mi subtítulo</h3>
   <h4>Mi sub-subtítulo</h4>
-#+end_src
+	#+end_src
 *** Listas
 - Hay dos tipos de listas:
-  - Ordenadas =<ol>=
-  - Desordenadas =<ul>=
-- Cada elemento de la lista se especifica con =<li>=
-#+begin_src html
-  <ul>
-    <li>leche</li>
-    <li>pan</li>
-    <li>huevos</li>
-  </ul>
-
-  <ol>
-    <li>Margaret Court</li>
-    <li>Serena Williams</li>
-    <li>Steffi Graf</li>
-  </ol>
-#+end_src
+- Ordenadas =<ol>=
+   - Desordenadas =<ul>=
+   - Cada elemento de la lista se especifica con =<li>=
+   #+begin_src html
+     <ul>
+         <li>leche</li>
+         <li>pan</li>
+         <li>huevos</li>
+     </ul>
+     
+     <ol>
+         <li>Margaret Court</li>
+         <li>Serena Williams</li>
+         <li>Steffi Graf</li>
+     </ol>
+	 #+end_src
 *** Vínculos
 - Los vínculos son los que hacen de la web, la web. Se usan con =<a>= que viene de /anchor/
-- Para convertir texto dentro de un párrafo en un vínculo
-- Para especificar a dónde va el vínculo se hace con el atributo =href:"url"=
-- Es importante indicar el protocolo delante: =http://= o =https://=
-#+begin_src html
-<p>Encontrarás toda la información sobre el máster <a href="https://mpvd.es">aquí</a></p>
-#+end_src
+  - Para convertir texto dentro de un párrafo en un vínculo
+  - Para especificar a dónde va el vínculo se hace con el atributo =href:"url"=
+  - Es importante indicar el protocolo delante: =http://= o =https://=
+  #+begin_src html
+  <p>Encontrarás toda la información sobre el máster <a href="https://mpvd.es">aquí</a></p>
+  #+end_src
 *** Importancia
 - =em= realza la /importancia/ del texto que encierra
 - =strong= realza la *máxima importancia* del texto que encierra
 #+begin_src html
-  <p>El concierto de <em>Rock Paradise</em> tendrá lugar el día 24 de enero a las 19:30, será <strong>obligatorio presentar acreditación</strong></p>
+<p>El concierto de <em>Rock Paradise</em> tendrá lugar el día 24 de enero a las 19:30, será <strong>obligatorio presentar acreditación</strong></p>
 #+end_src
 *** Cita
 - Con =<blockquote>= hacemos una cita textual de otro texto externo
 - este elemento puede tener el atributo src_html[:exports code]{cite="url"} para enlazar la fuente
 - Podemos indicar la autoría, documento o fuente de la cita con =<cite>=
 #+begin_src html
-Desde la <cite>OCU</cite> señalan lo siguiente:
-<blockquote cite="https://www.ocu.org/fincas-y-casas/glosario-inmobiliario/c/cooperativas-de-vivienda">Ahora mismo hay muy pocos supermercados y los cooperativistas muchas veces participan más por activismo que por conveniencia</blockquote>
+  Desde la <cite>OCU</cite> señalan lo siguiente:
+  <blockquote cite="https://www.ocu.org/fincas-y-casas/glosario-inmobiliario/c/cooperativas-de-vivienda">Ahora mismo hay muy pocos supermercados y los cooperativistas muchas veces participan más por activismo que por conveniencia</blockquote>
 #+end_src
 *** Abreviatura y acrónimo
 - Para abreviatura utilizamos =<abbr>=
 - Para un acrónimo o uso de siglas lo hacemos con =<acronym>=
-- En el atributo =title= podemos indicar el significado de esa abreviatura o acrónimo
-#+begin_src html
-  <p>El <acronym title="World Wide Web Consortium">W3C</acronym> es quien define el estándar <abbr title="HyperText Markup Language">HTML</abbr> 
-#+end_src
+  - En el atributo =title= podemos indicar el significado de esa abreviatura o acrónimo
+  #+begin_src html
+  <p>El <acronym title="World Wide Web Consortium">W3C</acronym> es quien define el estándar <abbr title="HyperText Markup Language">HTML</abbr>
+      #+end_src
 *** Definición
 - Para indicar una definición lo hacemos con =<dfn>=
 - El elemento que lo encierra es el contexto de la definición
-  #+begin_src html
+#+begin_src html
 <p>A <dfn id="def-validator">validator</dfn> is a program that checks for syntax errors in code or documents.</p>
-  #+end_src
+#+end_src
 *** Inserción y borrado
 - Cuando queremos borrar o modificar contenido en una publicación realizada
 - Con =<ins>= indicamos la modificicación y quedará subrayado
@@ -224,7 +227,7 @@ Desde la <cite>OCU</cite> señalan lo siguiente:
 - Y con  =datetime= la fecha de la modificación
 #+reveal: split:t
 #+begin_src html
-<p>El origen del terremoto fue en la localidad de <del cite="https://www.elperiodicomediterraneo.com/comarcas/2017/12/16/burriana-registra-terremoto-durante-madrugada-41423109.html">Burriana</del> <ins>Lorca</ins>.</p>
+  <p>El origen del terremoto fue en la localidad de <del cite="https://www.elperiodicomediterraneo.com/comarcas/2017/12/16/burriana-registra-terremoto-durante-madrugada-41423109.html">Burriana</del> <ins>Lorca</ins>.</p>
 #+end_src
 *** Tiempo
 - El elemento =<time>= representa un periodo específico de tiempo
@@ -236,13 +239,13 @@ Desde la <cite>OCU</cite> señalan lo siguiente:
 <p>El concierto empieza a las <time datetime="20:00">20:00</time> y podrás disfrutarlo durante<time datetime="PT2H30M">2h 30m</time>.</p>
 #+end_src
 ** Preformateado de texto
-- Cuando queremos mostrar el texto preformateado y escrito tal y como lo hacemos en el HTML
-- Se suele renderizar en el navegador con una fuente monoespaciada
-- Se respetan los espacios en blanco
-- Escape de caracter: =<= (&lt), =>= (&gt), =&= (&amp), ="= (&quot) [[https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references][Ver más aquí]]
-#+reveal: split:t
-#+begin_src html
-  <pre>
+ - Cuando queremos mostrar el texto preformateado y escrito tal y como lo hacemos en el HTML
+ - Se suele renderizar en el navegador con una fuente monoespaciada
+ - Se respetan los espacios en blanco
+ - Escape de caracter: =<= (&lt), =>= (&gt), =&= (&amp), ="= (&quot) [[https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references][Ver más aquí]]
+ #+reveal: split:t
+ #+begin_src html
+						    <pre>
       ___________________________
   &lt; I'm an expert in my field. &gt;
       ---------------------------
@@ -251,44 +254,44 @@ Desde la <cite>OCU</cite> señalan lo siguiente:
               (__)\       )\/\
                   ||----w |
                   ||     ||
-  </pre>
-#+end_src
+						    </pre>
+  #+end_src
 ** Mostrar código
 - Para mostrar código podemos hacerlo con el elemento =<code>=
 - Normalmente se renderiza con fuente monoespaciada
 #+begin_src html
-<p>The function <code>selectAll()</code> highlights all the text in the input field so the user can, for example, copy or delete the text.</p>
+  <p>The function <code>selectAll()</code> highlights all the text in the input field so the user can, for example, copy or delete the text.</p>
 #+end_src
 - Si queremos mostrar multiples líneas de código podemos encerrarlo dentro de =<pre>=
 #+begin_src html
   <pre>
-    <code>
-       body {
-         padding: 0;
-         margin: 0;
-         box-sizing: border-box;
-       }
-    </code>
-  </pre>
+                                                           <code>
+  body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+                                                           </code>
+                                                       </pre>
 #+end_src
 ** Otros enlaces
 - Para enlazar con un script de javascript por ejemplo, podemos hacerlo con el elemento =<script>=
 #+begin_src html
-<head>
-  <script type="text/javascript" src="http://www.ejemplo.com/js/inicializar.js"></script>
-</head>
+  <head>
+    <script type="text/javascript" src="http://www.ejemplo.com/js/inicializar.js"></script>
+  </head>
 #+end_src
 - Con =<script>= también podemos escribir el código /JS/ directamente en nuestro /HTML/
 #+begin_src html
   <script type="text/javascript">
-    window.onload = function() { alert("La página se ha cargado completamente"); }
+          window.onload = function() { alert("La página se ha cargado completamente"); }
   </script>
 #+end_src
 #+reveal: split
 - Si queremos enlazar con otros recursos, como por ejemplo una hoja de estilo /CSS/, podemos hacerlo con el elemento =<link>=
 #+begin_src html
 <head>
-  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
 #+end_src
 * Para el próximo día :noexport:
@@ -313,40 +316,40 @@ p {
 #+reveal: split
 Intenta averiguar qué color tendrá la frase "Hola Mundo!"
 #+REVEAL_HTML: <div class="column" style="float:left; width: 45%">
-#+begin_src html
-<body>
-  <div class="container">
-    <p class="text">Hola mundo</p>
-  </div>
-</body>
-#+end_src
-#+REVEAL_HTML: </div>
+    #+begin_src html
+    <body>
+	<div class="container">
+	    <p class="text">Hola mundo</p>
+	</div>
+    </body>
+    #+end_src
+    #+REVEAL_HTML: </div>
 #+REVEAL_HTML: <div class="column" style="float:right; width: 45%">
-#+begin_src css
-body {
-  color: blue;
-}
+	#+begin_src css
+	body {
+	color: blue;
+	}
 
-.container {
-  color: red;
-}
+	.container {
+	color: red;
+	}
 
-p {
-  color: green;
-}
-#+end_src
-#+REVEAL_HTML: </div>
+	p {
+	color: green;
+	}
+	#+end_src
+	#+REVEAL_HTML: </div>
 ** Configuración
 - Para que tengan efectos estos estilos tenemos que guardarlo en un archivo =.css=
 - Y además tendremos que vincular este archivo desde el html entre las etiquetas =<head>= y =</head>=
-#+begin_src html 
-  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+#+begin_src html
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 #+end_src
 #+reveal: split:t
 - También puede ser una hoja de estilo interna y que se indique dentro de las etiquetas =<style></style>= dentro del html
 - O puede ser un estilo en línea que sólo afectan a un elemento HTML, aunque no es muy recomendable trabajar así
 #+begin_src html
-<h1 style="color: blue;background-color: yellow;border: 1px solid black;">¡Hola mundo!</h1>
+    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">¡Hola mundo!</h1>
 #+end_src
 ** Estructura
 #+attr_html: :height 300px :display block
@@ -380,7 +383,7 @@ p, li, h1 {
 - Descendentes: =div span=
 - De elementos hijo: =article > p=
 - De elementos hermanos adyacentes: =h1 + p=
-- general de elementos hermanos: =h1 ~ p= 
+- general de elementos hermanos: =h1 ~ p=
 ** Cajas (Box model)
 - Podemos pensar los elementos HTML como cajas apiladas una sobre otra
 - Cada caja tiene una serie de propiedades como estas:
@@ -408,9 +411,9 @@ Si queremos utilizar una tipografía online o webfont, tenemos varios métodos:
   @font-face {
     font-family: myFont;
     src: url("url de la webfont");
-    font-weight: bold; 
+    font-weight: bold;
   }
-  
+
   p {
       font-family: myFont;
   }
@@ -426,7 +429,7 @@ p {
 #+reveal: split:t
   - Con =<link>= (HTML)
 #+begin_src html
- <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/futura-renner" type="text/css"/> 
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/futura-renner" type="text/css"/>
 #+end_src
 #+begin_src css
  p {
@@ -443,155 +446,276 @@ p {
 - Contiene plantillas de diseño web: tipografías, botones, formularios, menús, etc.
 - Estas plantillas son básicamente HTML y CSS, y algunos componentes requieren de JS
 - Desarrollado desde la estrategia /mobile first/
-** Empezamos!
+- Los tres pilares de Bootstrap son: _Grid_, _Componentes_, _Iconos_.
+** Preparemos nuestro HTML
 - Primero comenzamos con el index.html
 #+begin_src html
-<!doctype html>
-<html lang="en">
-  ...
-</html>
+    <!doctype html>
+    <html lang="en">
+	...
+    </html>
 #+end_src
 ** Queremos un diseño responsivo
-- Con la etiqueta viewport meta indicamos que se adapte para móviles
+- Con la etiqueta =viewport= meta indicamos que se adapte para móviles
 #+begin_src html
-    <head>
+  <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>Mi página en Bootstrap</title>
-    </head>
+  </head>
 #+end_src
-- Hacemos una prueba para ver la diferencia.
-** TODO Enlazamos el CSS y JS de Bootstrap
-- Vamos a enlazar a unos archivos CSS y JS en local descargados en la raiz de nuestro proyecto
-- Primero indicamos el enlace al archivo CSS dentro de =<head>=
+** Enlazamos el CSS y JS de Bootstrap
+- Hay dos maneras de enlazarlos: con enlaces a CDN o enlaces a archivos locales
+- El CSS va enlazado en el =<head>= de nuestro HTML
 #+begin_src html
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+#+end_src
+- Y el JS puede ir al final dentro de =<body>=
+#+begin_src html
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 #+end_src
 
+** Grid
+- Es un conjunto de *filas* y *columnas* que permiten maquetar nuestra web
+- También define cómo se adaptará el diseño responsivo
+- Cada fila tiene *12 columnas*
+- Trabajamos de forma porcentual
+#+reveal: split:t
+#+attr_html: :height 300px :display block
+#+caption: Grid de 12 columnas. Fuente: [[https://medium.muz.li/responsive-grid-design-ultimate-guide-7aa41ca7892][Nitish Khagwal]]
+https://miro.medium.com/v2/resize:fit:720/format:webp/1*hw8EKWA-DNytrtbzgZ_dEw.png
+#+reveal: split:t
+- Hay clases para esta grid:
+  - Si es fila o columna: =row=, =col=
+  - Le podemos indicar medidas específicas (/breakpoints/) con: =col-sm-=, =col-md-=, =col-lg-=, =col-xl-=
+  - Después podemos asignar el número de columnas que queremos que ocupe ese elemento
+#+begin_src html
+  <div class="row">
+    <div class="col-md-6"
+    </div>
+  </div>
+#+end_src
+*** Breakpoints del grid
+- Ancho a partir del cual nuestra maquetación web se adaptará
+- xs: < 576px (=col= por defecto)
+- sm: >= 576px
+- md: >= 768px
+- lg: >= 992px
+- xl: >= 1200px
+- xxl: >= 1400px
+*** Contenedores
+- Un contenedor =container= puede contener filas, y cada fila contiene a su vez 12 columnas
+- Este contenedor es responsivo, pero tiene un ancho máximo fijo (*max-width*) que varía según el dispositivo en el que estemos
+#+begin_src html
+    <div class="container">
+        <div class="row">
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+    </div>
+#+end_src
+#+reveal: split:t
+- Para que el contenedor ocupe todo el ancho de nuestra web usaremos la clase =container-fluid=
+*** Contenedores responsivos
+- Pueden ser responsivos si le indicamos los breakpoints:
+  - =container-sm=
+  - =container-md=
+  - =container-lg=
+  - =container-xl=
+  - =container-xxl=
+- Aquí se comportarán como =container= y al llegar al breakpoint indicado se comportará como =container-fluid=
+- Vamos a hacer un ejemplo para ver la diferencia entre =container=, =container-fluid= y =container-lg=
+** Flexbox
+- Nos permite distribuir y alinear los elementos dentro de un contenedor /flex/ automáticamente según el tamaño del dispositivo
+- La propiedad en CSS es =display: flex;=
+- En bootstrap: =d-flex=
+- 
+*** flex-direction
+- Nos permite establecer la dirección de los elementos del container. Esta dirección puede ser: =flex-row= (horizontal, por defecto), =flex-column= (vertical)
+- Si añadimos a estas direcciones =-reverse= colocará los elementos al revés
+#+attr_html: :height 200px :display block
+#+caption: Flex direction. Fuente: [[https://dev.to/virensuthar/get-started-with-flexbox-3in5][virensuthar]]
+https://res.cloudinary.com/practicaldev/image/fetch/s----O5J3PQ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/4jkkaafn2ef4osrtmhyg.png
+*** flex-wrap
+- Por defecto los elementos se distribuyen automáticamente en la misma fila del container flex
+- Si queremos que se vayan distribuyendo en base a sus tamaños podemos utilizar =flex-wrap=
+- La opción por defecto sería =flex-nowrap=
+- También le podemos indicar que los distribuya al revés con =-reverse= al final
+#+attr_html: :height 200px :display block
+#+caption: Flex wrap. Fuente: [[https://dev.to/virensuthar/get-started-with-flexbox-3in5][virensuthar]]
+https://res.cloudinary.com/practicaldev/image/fetch/s--JtwNc8_k--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/krxb50fi5gp2h4xi6fbj.png
+*** justify-content
+- Nos permite alinear los items en el eje horizontal
+- Podemos hacerlo de las siguientes maneras:
+  - =start= (izquierda, por defecto)
+  - =end= (derecha) 
+  - =center=
+  - =between=
+  - =around=
+  - =evenly=
+- La forma en cómo lo indicamos es =justify-content-end=, por ejemplo
+- No se indica como left y right por escrituras /RTL/ (de derecha a izquierda)
+*** align-items
+- Nos permite alinear los items en el eje vertical
+- Podemos hacerlo de las siguientes maneras:
+  - =start= (arriba)
+  - =end= (abajo) 
+  - =center= 
+  - =baseline= 
+  - =stretch= (por defecto)
+- La forma en cómo lo indicamos es =justify-content-end=, por ejemplo
+*** otras propiedes de los elementos dentro del container
+- =grow= para tomar el espacio necesario
+- =shrink= para tomar el espacio mínimo haciendo wrap de su contenido si es necesario
+- =fill= para llenar en función de su contenido
+- =order= para ordenar los elementos
+** Componentes
+- Son elementos HTML con estilo propio de Bootstrap y que podemos reutilizar
+- La mejor manera de explorarlos es ir a la documentación al apartado [[https://getbootstrap.com/docs/5.3/components/accordion/][*Components*]]
+- Probamos varios en nuestro HTML
+** Iconos
+- Es una [[https://icons.getbootstrap.com/][librería de iconos]] /SVG/ (Scalable Vector Graphics)
+- Podemos importar la librería de varias maneras: CDN, local, incrustando el SVG, etc.
+- La forma en cómo los incorporamos en nuestro HTML es de la siguiente manera:
+#+begin_src html
+<i class="bi-alarm"></i>
+#+end_src
+- Si queremos darle estilos:
+#+begin_src html
+<i class="bi-alarm" style="font-size: 2rem; color: blue;"></i>
+#+end_src
+* TODO Github Pages
+	:PROPERTIES:
+	:reveal_background: #bfbfbf
+	:END:
 * TODO JavaScript
-:PROPERTIES:
-:reveal_background: #f0db4f
-:END:
+	:PROPERTIES:
+	:reveal_background: #f0db4f
+	:END:
 * Manuales / Docs
-- https://developer.mozilla.org/es/docs/Learn/HTML
-- https://www.w3schools.com/html/default.asp 
+	- https://developer.mozilla.org/es/docs/Learn/HTML
+	- https://www.w3schools.com/html/default.asp
 * Siguiente ->                                                     :noexport:
-   :PROPERTIES:
-   :reveal_background: #FFCC00
-   :END:
-#+REVEAL_HTML: <a href="https://julianprz.gitlab.io/programacion-creativa-21-22/main/docs/01_Processing/03-formas-simples-personalizadas.html" class="r-fit-text" target="_blank">3-Formas simples / personalizadas</h2>
+	:PROPERTIES:
+	:reveal_background: #FFCC00
+	:END:
+	#+REVEAL_HTML: <a href="https://julianprz.gitlab.io/programacion-creativa-21-22/main/docs/01_Processing/03-formas-simples-personalizadas.html" class="r-fit-text" target="_blank">3-Formas simples / personalizadas</h2>
 * Template                                                         :noexport:
-** Índice
-# Generar TOC
-# org-reveal-manual-toc
-** Indice 2 columnas
-#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
-#+REVEAL_HTML: </div>
-#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
-#+REVEAL_HTML: </div>
-** 2 Columnas imagen
-#+REVEAL_HTML: <div class="column" style="float:left; width: 45%">
-#+attr_html: :heigh 200px :display block
-#+caption: 
-[[../../img/02/]]
-#+REVEAL_HTML: </div>
+*** Índice
+	# Generar TOC
+	# org-reveal-manual-toc
+*** Indice 2 columnas
+	#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+	#+REVEAL_HTML: </div>
+	#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+	#+REVEAL_HTML: </div>
+*** 2 Columnas imagen
+	#+REVEAL_HTML: <div class="column" style="float:left; width: 45%">
+	#+attr_html: :heigh 200px :display block
+	#+caption:
+	[[../../img/02/]]
+	#+REVEAL_HTML: </div>
 
-#+REVEAL_HTML: <div class="column" style="float:right; width: 45%">
-#+attr_html: :height 290px :display block
-#+CAPTION:
-[[../../img/02/]]
-#+REVEAL_HTML: </div>
-** 2 Columnas código
-#+REVEAL_HTML: <div class="column" style="float:left; width: 45%">
-#+begin_src arduino
-#+end_src
-#+REVEAL_HTML: </div>
+	#+REVEAL_HTML: <div class="column" style="float:right; width: 45%">
+	#+attr_html: :height 290px :display block
+	#+CAPTION:
+	[[../../img/02/]]
+	#+REVEAL_HTML: </div>
+*** 2 Columnas código
+	#+REVEAL_HTML: <div class="column" style="float:left; width: 45%">
+	#+begin_src arduino
+	#+end_src
+	#+REVEAL_HTML: </div>
 
-#+REVEAL_HTML: <div class="column" style="float:right; width: 45%">
-#+begin_src arduino
-#+end_src
-#+REVEAL_HTML: </div>
- 
-** 3 Columnas
-#+REVEAL_HTML: <div class="column" style="float:left; width: 33%">
-#+attr_html: :heigh 200px :display block
-#+caption: 
-[[../../img/]]
-#+REVEAL_HTML: </div>
+	#+REVEAL_HTML: <div class="column" style="float:right; width: 45%">
+	#+begin_src arduino
+	#+end_src
+	#+REVEAL_HTML: </div>
 
-#+REVEAL_HTML: <div class="column" style="float:left; width: 33%">
-#+attr_html: :height 290px :display block
-#+CAPTION:
-[[../../img/]]
-#+REVEAL_HTML: </div>
+*** 3 Columnas
+	#+REVEAL_HTML: <div class="column" style="float:left; width: 33%">
+	#+attr_html: :heigh 200px :display block
+	#+caption:
+	[[../../img/]]
+	#+REVEAL_HTML: </div>
 
-#+REVEAL_HTML: <div class="column" style="float:right; width: 33%">
-#+attr_html: :height 290px :display block
-#+CAPTION:
-[[../../img/]]
-#+REVEAL_HTML: </div>
+	#+REVEAL_HTML: <div class="column" style="float:left; width: 33%">
+	#+attr_html: :height 290px :display block
+	#+CAPTION:
+	[[../../img/]]
+	#+REVEAL_HTML: </div>
 
-** 1 imagen
-#+attr_html: :height 400px :display block
-#+caption: 
-[[../../img/02/]]
+	#+REVEAL_HTML: <div class="column" style="float:right; width: 33%">
+	#+attr_html: :height 290px :display block
+	#+CAPTION:
+	[[../../img/]]
+	#+REVEAL_HTML: </div>
 
-** SVG
-#+HTML: <img src="https://processing.org/a9c1aea53d4f4788062d226affba4b4d/objects.svg" width="500"/>
-** export processing code                                         :noexport:
-#+begin_src processing :tangle no ../../code/04/sketch_00_example/sketch_00_example.pde :mkdirp yes
+*** 1 imagen
+	#+attr_html: :height 400px :display block
+	#+caption:
+	[[../../img/02/]]
+*** SVG
+	#+HTML: <img src="https://processing.org/a9c1aea53d4f4788062d226affba4b4d/objects.svg" width="500"/>
+*** export processing code                                       :noexport:
+	#+begin_src processing :tangle no ../../code/04/sketch_00_example/sketch_00_example.pde :mkdirp yes
 
-#+end_src
-# org-babel-tangle
-# Tangle the current file. Bound to C-c C-v t.
-# Tangle the current code block. C-u C-c C-v C-t
-# With prefix argument only tangle the current code block.
+	#+end_src
+	# org-babel-tangle
+	# Tangle the current file. Bound to C-c C-v t.
+	# Tangle the current code block. C-u C-c C-v C-t
+	# With prefix argument only tangle the current code block.
 
-** inline processing code                                         :noexport:
-# src_processing[:exports code]{;}
+*** inline processing code                                       :noexport:
+	# src_processing[:exports code]{;}
 
-** Symbols
+*** Symbols
 - \downarrow
-  
 * Contents                                                         :noexport:
-** Sistemas interactivos
-- https://www.encyclopedia.com/computing/news-wires-white-papers-and-books/interactive-systems
+*** Sistemas interactivos
+	- https://www.encyclopedia.com/computing/news-wires-white-papers-and-books/interactive-systems
+	-
+*** Web
+**** Responsive Design
+	- https://mdo.github.io/table-grid/
+**** Scrollytelling
+**** Publicación
+**** Accesibilidad
+	- https://amarachijohnson.com/a-beginners-guide-to-web-accessibility-ckelka23j00cd8cs10h24byf7?utm_content=139523215&utm_medium=social&hss_channel=tw-1120244738&utm_source=twitter&utm_campaign=accessibility
+	- WAI: https://www.w3.org/WAI/
+	- ARIA: Accesible Rich Internet Applications
+	- https://developer.mozilla.org/es/docs/Web/Accessibility/ARIA
+	- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
+	- https://briefs.video/videos/what-is-aria-even-for/
+	-
+	- Acces.: https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94
+	- Color
+	- https://contrast-ratio.com/
+	- https://contrastchecker.com/
+	- https://stephaniewalter.design/blog/color-accessibility-tools-resources-to-design-inclusive-products/
+	- https://jxnblk.github.io/colorable/demos/matrix/
+	- https://contrast-ratio.com/
+	- Imagen:
+	- Alt
+	- Focus state
+	-
+	- Etiquetas en los forms
+	- ScreeReaders
+	- https://www.nvaccess.org/download/
+**** Universalidad
+	- https://www.amberscript.com/es/blog/internet-universalidad-definicion/
+**** SEO
+	- https://cards-dev.twitter.com/validator
+	- https://developers.facebook.com/tools/debug
+	- https://developers.google.com/search/docs/advanced/structured-data0
+	- https://ogp.me/
+	-
+**** UX
+	- https://lawsofux.com/
+*** Links 
+- https://developer.mozilla.org/en-US/docs/Web/CSS/position
+- https://www.washingtonpost.com/graphics/2019/investigations/opioid-pills-overdose-analysis/
 - 
-** Web
-*** Responsive Design
-- https://mdo.github.io/table-grid/
-** Scrollytelling
-** Publicación
-** Accesibilidad
-- https://amarachijohnson.com/a-beginners-guide-to-web-accessibility-ckelka23j00cd8cs10h24byf7?utm_content=139523215&utm_medium=social&hss_channel=tw-1120244738&utm_source=twitter&utm_campaign=accessibility
-- WAI: https://www.w3.org/WAI/
-- ARIA: Accesible Rich Internet Applications
-  - https://developer.mozilla.org/es/docs/Web/Accessibility/ARIA
-  - https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
-  - https://briefs.video/videos/what-is-aria-even-for/
-  - 
-- Acces.: https://uxdesign.cc/designing-for-accessibility-is-not-that-hard-c04cc4779d94
-- Color
-  - https://contrast-ratio.com/
-  - https://contrastchecker.com/
-  - https://stephaniewalter.design/blog/color-accessibility-tools-resources-to-design-inclusive-products/
-  - https://jxnblk.github.io/colorable/demos/matrix/
-  - https://contrast-ratio.com/
-- Imagen:
-  - Alt
-- Focus state
-  - 
-- Etiquetas en los forms
-- ScreeReaders
-  - https://www.nvaccess.org/download/
-** Universalidad
-- https://www.amberscript.com/es/blog/internet-universalidad-definicion/
-** SEO
-- https://cards-dev.twitter.com/validator
-- https://developers.facebook.com/tools/debug
-- https://developers.google.com/search/docs/advanced/structured-data0
-- https://ogp.me/
-- 
-** UX
-- https://lawsofux.com/
-** 

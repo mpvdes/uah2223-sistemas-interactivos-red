@@ -1,0 +1,28 @@
+h1 {
+	color: #12ABFF;
+	border-bottom: 3px solid green;
+	padding: 60px 30px 60px 20px ;
+	background-color: red;
+	font-family: Arial, sans-serif;
+	font-weight: extra-bold, bold, regular, light, thin;
+	font-style: italic;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+p {
+	font-size: 1.5em;
+}
+
+a:link{
+	color: green;
+}
+
+a:hover{
+	color:red;
+}
+
+a:visited{
+	color:purple;
+}
+

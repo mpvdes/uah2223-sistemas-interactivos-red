@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<meta name="author" content="(largocreatura)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///home/largocreatura/org/revealjs/dist/reveal.css"/>
+
+<link rel="stylesheet" href="file:///home/largocreatura/org/revealjs/dist/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'file:///home/largocreatura/org/revealjs/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2 class="author">largocreatura</h2><p class="date">Created: 2023-01-31 mar 00:09</p>
+</section>
+
+<section>
+<section id="slide-org721bcd0">
+<h2 id="org721bcd0"><span class="section-number-2">1.</span> Atajos de teclado nano</h2>
+</section>
+</section>
+<section>
+<section id="slide-org0c8b96d">
+<h2 id="org0c8b96d"><span class="section-number-2">2.</span> Configuraciones nano</h2>
+<p>
+Estas configuraciones las indicamos en nuestro archivo de configuración de nano "<i>.nanorc</i>"
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-sh"   ><code trim><span style="color: #5B6268;">## </span><span style="color: #5B6268;">Establezco tama&#241;o de tabulaci&#243;n en dos espacios</span>
+<span style="color: #c678dd;">set</span> tabsize 2
+<span style="color: #5B6268;">## </span><span style="color: #5B6268;">Establezco autoindentado, es decir, hereda del parent</span>
+<span style="color: #c678dd;">set</span> autoindent
+<span style="color: #5B6268;">## </span><span style="color: #5B6268;">Convierte tabs a espacios</span>
+<span style="color: #c678dd;">set</span> tabstospaces
+<span style="color: #5B6268;">## </span><span style="color: #5B6268;">Aqu&#237; configuro n&#250;mero de l&#237;nea</span>
+<span style="color: #c678dd;">set</span> linenumbers
+<span style="color: #5B6268;">## </span><span style="color: #5B6268;">Aqu&#237; configuro ajuste suave de l&#237;nea</span>
+<span style="color: #c678dd;">set</span> softwrap
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orge55f489">
+<h2 id="orge55f489"><span class="section-number-2">3.</span> Atajos de teclado emacs</h2>
+</section>
+</section>
+<section>
+<section id="slide-org85cf00a">
+<h2 id="org85cf00a"><span class="section-number-2">4.</span> Configuraciones emacs</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+</section>
+<section id="slide-org8763a71">
+<h3 id="org8763a71"><span class="section-number-3">4.1.</span> web-mode.el</h3>
+<ul>
+<li>Este modo nos ayuda a trabajar los archivos HTML</li>
+<li>Instalamos paquete con <code>M-x package-install</code></li>
+<li><kbd>M-x</kbd></li>
+<li>le indicamos "web-mode"</li>
+<li><p>
+Añadimos lo siguiente en nuestro <i>init.el</i>
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-lisp"   ><code trim>(<span style="color: #51afef;">require</span> '<span style="color: #a9a1e1;">web-mode</span>)
+(add-to-list 'auto-mode-alist '(<span style="color: #98be65;">"\\.phtml\\'"</span> . web-mode))
+(add-to-list 'auto-mode-alist '(<span style="color: #98be65;">"\\.tpl\\.php\\'"</span> . web-mode))
+(add-to-list 'auto-mode-alist '(<span style="color: #98be65;">"\.[agj]sp\'"</span> . web-mode))
+(add-to-list 'auto-mode-alist '(<span style="color: #98be65;">"\.as[cp]x\'"</span> . web-mode))
+(add-to-list 'auto-mode-alist '(<span style="color: #98be65;">"\.erb\'"</span> . web-mode))
+(add-to-list 'auto-mode-alist '(<span style="color: #98be65;">"\.mustache\'"</span> . web-mode))
+(add-to-list 'auto-mode-alist '(<span style="color: #98be65;">"\.djhtml\'"</span> . web-mode))
+(add-to-list 'auto-mode-alist '(<span style="color: #98be65;">"\.html?\'"</span> . web-mode))
+
+(global-set-key (kbd <span style="color: #98be65;">"C-c y"</span>) 'web-mode-yank)
+</code></pre>
+</div></li>
+
+</ul>
+</section>
+<section id="slide-orgf6fb49e">
+<h3 id="orgf6fb49e"><span class="section-number-3">4.2.</span> </h3>
+</section>
+</section>
+</div>
+</div>
+<script src="/home/largocreatura/org/revealjs/dist/reveal.js"></script>
+<script src="file:///home/largocreatura/org/revealjs/plugin/markdown/markdown.js"></script>
+<script src="file:///home/largocreatura/org/revealjs/plugin/zoom/zoom.js"></script>
+<script src="file:///home/largocreatura/org/revealjs/plugin/notes/notes.js"></script>
+
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+plugins: [RevealMarkdown, RevealZoom, RevealNotes]
+});
+
+</script>
+</body>
+</html>

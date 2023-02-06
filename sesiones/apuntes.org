@@ -1,0 +1,73 @@
+#+OPTIONS: toc:nil
+
+* Atajos de teclado nano
+* Configuraciones nano
+Estas configuraciones las indicamos en nuestro archivo de configuración de nano "/.nanorc/"
+#+begin_src sh
+  ## Establezco tamaño de tabulación en dos espacios
+  set tabsize 2
+  ## Establezco autoindentado, es decir, hereda del parent
+  set autoindent
+  ## Convierte tabs a espacios
+  set tabstospaces
+  ## Aquí configuro número de línea
+  set linenumbers
+  ## Aquí configuro ajuste suave de línea
+  set softwrap
+#+end_src
+* Atajos de teclado emacs
+** web-mode
+   - Si pulsamos @@html:<kbd>d/</kbd>@@ nos creará de forma rápida el elemento de apertura y cierre
+     - d/ -> div
+     - s/ -> span
+     - h/ -> h1
+     - u/ -> ul
+     - i/ -> img
+     - a/ -> a
+     - g/ -> strong
+     - j/ -> script
+     - 2-6/ -> h2-h6
+   - @@html:<kbd>C-c TAB</kbd>@@ para indentar todo el buffer
+   - @@html:<kbd>C-c C-f</kbd>@@ para contraer/expandir elemento html. "f" de /fold/
+   - @@html:<kbd>C-c C-s</kbd>@@ para snippets: =table=, =html=, =ul=
+   - @@html:<kbd>M-;</kbd>@@ comentar elemento HTML entero
+   - @@html:<kbd>C-c C-w</kbd>@@ habilitamos el modo para ver los espacios en blanco que sobren
+   - @@html:<kbd>C-c RET</kbd>@@ para seleccionar elemento HTML en el que estemos encima. Si repetimos la secuencia de comandos, marca al elemento parent, y así sucesivamente.
+   - @@html:<kbd>C-c C-e a</kbd>@@ seleccionamos el contenido que hay dentro del elemento
+   - @@html:<kbd>C-c C-e s</kbd>@@ seleccionamos etiquetas y contenido
+   - @@html:<kbd>C-c C-e /</kbd>@@ autocompleta el cierre de una etiqueta abierta
+   - @@html:<kbd>C-c C-e w</kbd>@@ encierra un elemento dentro de otro. Nos pregunta de forma interactiva en qué elemento queremos encerrarlo (wrap)
+   - @@html:<kbd>C-c C-e c</kbd>@@ duplica a continuación el elemento en el que estemos encima
+   - @@html:<kbd>C-c C-e i</kbd>@@ insertar elemento
+   - @@html:<kbd>C-c C-e k</kbd>@@ elimina el elemento en el que estemos encima
+   - @@html:<kbd>C-c C-e t</kbd>@@ transpone el elemento que estemos con el siguiente si están en el mismo nivel
+   - @@html:<kbd>C-c C-a i</kbd>@@ inserta atributo
+   - @@html:<kbd>C-c C-a k</kbd>@@ elimina un atributo en el que estemos encima
+   - @@html:<kbd>C-c C-a t</kbd>@@ transpone el atributo con el siguiente
+   - Puedes ver más comandos en https://web-mode.org/
+* Configuraciones emacs
+** web-mode.el
+   - Este modo nos ayuda a trabajar los archivos HTML
+   - Instalamos paquete con =M-x package-install=
+   - le indicamos "web-mode"
+   - Añadimos lo siguiente en nuestro /init.el/
+     #+begin_src lisp
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\.[agj]sp\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\.as[cp]x\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\.erb\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\.mustache\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\.djhtml\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\.html?\'" . web-mode))
+
+(global-set-key (kbd "C-c y") 'web-mode-yank)
+     #+end_src
+   - Si queremos que tenga la opción de /auto expanding/:
+      #+begin_src lisp
+	     (eval-after-load "web-mode"
+	       '(setq web-mode-enable-auto-expanding t))
+      #+end_src
+* Apuntes de git
+  - Ver configuración de git =git config --list=
