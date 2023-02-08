@@ -6,5 +6,6 @@
 -   Será nuestra carta de presentación donde indiquemos nuestro CV, bio, habilidades, etc.
 -   El entregable será un enlace de vuestro proyecto web en Github Pages
 -   La entrega la puedes hacer en el aula virtual
--   Fecha de entrega: <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-13 lun&gt;</span></span>
+-   Requisitos: usar al menos una imagen y una webfont online (open font library o google fonts)
+-   Fecha de entrega: <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-20 lun&gt;</span></span>
 

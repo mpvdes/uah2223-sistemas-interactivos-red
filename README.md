@@ -20,7 +20,7 @@ Puedes repasar estos [apuntes](sesiones/apuntes.md) sobre atajos de teclado y co
 ## Ejercicios
 
 -   [Ejercicio 1: marcado de texto](practicas/e1/e1-marcado.md)
--   TODO Ejercicio 2: web con estilos
+-   [Ejercicio 2: web con Bootstrap](practicas/e2/e2-web-bootstrap.md)
 
 ---
 
