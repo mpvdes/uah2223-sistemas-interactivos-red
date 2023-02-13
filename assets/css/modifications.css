@@ -7,11 +7,13 @@
 }
 
 .reveal code.hljs{
+    font-feature-settings: "liga" 0;
     font-family: "Iosevka Web", "Fira Sans", monospace;
     font-size: 0.7em;
     line-height:1.5;
 }
-.reveal code:not(.bash):not(.css):not(.processing):not(.arduino):not(.html){
+.reveal code:not(.bash):not(.css):not(.processing):not(.arduino):not(.html):not(.js){
+    font-feature-settings: "liga" 0;
     font-family: "Iosevka Web", "Fira Sans", monospace;
     color: HotPink;
 }
@@ -80,12 +82,13 @@
 }
 
 kbd {
-  -moz-border-radius: 6px;
+  /* -moz-border-radius: 6px; */
   -webkit-border-radius: 6px;
   border: 4px solid;
   border-radius: 6px;
   display: inline-block;
   font-family: "Iosevka Web", "Fira Sans", monospace;
+  font-feature-settings: "liga" 0;
   font-size: 80%;
   font-weight: normal;
   line-height: inherit;
@@ -101,12 +104,9 @@ kbd {
 
 .codeblock {
   margin: 20px auto;
-  position: relative; }
-
-/* .codeblock pre { */
-/*   margin: 0; */
-/*   width: 100%; */
-/*   font-size: 1rem; } */
+  position: relative;
+  font-family: "Iosevka Web", "Fira Sans", sans-serif !important;
+}
 
 .codeblock > button {
   opacity: 0.5;
@@ -120,7 +120,7 @@ kbd {
   border: 0;
   margin: 0;
   padding: .2em .5em;
-  font-family: "Iosevka Web", "Fira Sans", sans-serif;
+  font-family: "Iosevka Web", "Fira Sans", sans-serif !important;
   font-size: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
