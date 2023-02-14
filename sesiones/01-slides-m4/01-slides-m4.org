@@ -603,12 +603,12 @@ https://res.cloudinary.com/practicaldev/image/fetch/s--JtwNc8_k--/c_limit%2Cf_au
 - En el apartado "Branch" indicamos en qué carpeta está nuestro proyecto web. Puede estar en root "/" o en "/docs"
 - Damos a guardar. Una vez guardado, nos genera una URL donde se podrá ver el proyecto web renderizado
 - Es posible que tarde unos 2 mins hasta que se despliegue nuestra web
-* TODO JavaScript
+* JavaScript
 	:PROPERTIES:
 	:reveal_background: #f0db4f
 	:END:
 - Es un lenguaje de programación *interpretado* que va más allá de mostrar contenido estático
-- Mapas interactivos, gráaficos animados, reproducción de video, etc.
+- Mapas interactivos, gráficos animados, reproducción de video, etc.
 - Junto con /CSS/ y /HTML/ es la tercera capa que completa el set de tecnologías web estándar
 - Podemos tenerlo de lado de cliente o de servidor. En este módulo lo veremos del lado de cliente (en el navegador)
 ** Veamos un ejemplo

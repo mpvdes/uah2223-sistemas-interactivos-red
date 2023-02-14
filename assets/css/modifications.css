@@ -7,13 +7,13 @@
 }
 
 .reveal code.hljs{
-    font-feature-settings: "liga" 0;
+    font-feature-settings: "calt" 0;
     font-family: "Iosevka Web", "Fira Sans", monospace;
     font-size: 0.7em;
     line-height:1.5;
 }
 .reveal code:not(.bash):not(.css):not(.processing):not(.arduino):not(.html):not(.js){
-    font-feature-settings: "liga" 0;
+    font-feature-settings: "calt" 0;
     font-family: "Iosevka Web", "Fira Sans", monospace;
     color: HotPink;
 }
