@@ -4,6 +4,8 @@
     }
 .reveal ul{
     line-height: 1.5;
+    display: block !important; /* Para que una lista nueva en la slide no quede en el centro */
+    margin: unset; /* Extendemos un poco más la lista a los lados */
 }
 
 .reveal code.hljs{

@@ -17,6 +17,7 @@
 #+SELECT_TAGS: export
 #+EXCLUDE_TAGS: noexport
 #+REVEAL_PLUGINS: (highlight CopyCode)
+#+REVEAL_INIT_OPTIONS: hashOneBasedIndex: true, hash: true
 #+REVEAL_HIGHLIGHT_CSS: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/base16/espresso.min.css
 #+REVEAL_EXTRA_CSS: ../../assets/css/modifications.css
 #+REVEAL_EXTRA_CSS: ../../assets/fonts/webfont-iosevka-11.3.0/iosevka.css
@@ -616,7 +617,9 @@ https://res.cloudinary.com/practicaldev/image/fetch/s--JtwNc8_k--/c_limit%2Cf_au
 #+attr_html: :height 200px :display block
 #+caption:HTML
 #+begin_src html
-<p>Player 1: Chris</p>
+  <link href="style.css" rel="stylesheet">
+  <script src="script.js"></script>
+  <p>Player 1: Chris</p>
 #+end_src
 #+REVEAL_HTML: </div>
 
@@ -625,14 +628,11 @@ https://res.cloudinary.com/practicaldev/image/fetch/s--JtwNc8_k--/c_limit%2Cf_au
 #+caption: CSS
 #+begin_src css
 p {
-  font-family: 'helvetica neue', helvetica, sans-serif;
-  letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
   border: 2px solid rgba(0,0,200,0.6);
   background: rgba(0,0,200,0.3);
   color: rgba(0,0,200,0.6);
-  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
@@ -645,14 +645,14 @@ p {
 #+attr_html: :height 290px :display block
 #+caption: JS
 #+begin_src js
-const para = document.querySelector('p');
+  const para = document.querySelector('p'); //Almacenamos en la variable para el elemento 'p'
 
-para.addEventListener('click', updateName);
+  para.addEventListener('click', updateName); //Evento que lanza función updateName cuando clickamos en 'para'
 
-function updateName() {
-  let name = prompt('Enter a new name');
-  para.textContent = 'Player 1: ' + name;
-}
+  function updateName() {
+    let name = prompt('Enter a new name'); //Lanza un popup que nos pregunta por nuestro nombre, almacena ese input en la variable 'name'
+      para.textContent = 'Player 1: ' + name; //Actualiza el contenido de texto de la variable 'para' con el nuevo nombre
+  }
 #+end_src
 #+REVEAL_HTML: </div>
 ** APIs del navegador
@@ -668,31 +668,31 @@ function updateName() {
 - Cuando el navegador encuentra código de JS lo ejecuta en orden de arriba hacia abajo
 ** Añadiendo JS a nuestro proyecto
 - Tenemos 3 maneras de hacerlo:
-  1) Interno: con las etiquetas =<script>= y =</script>= dentro de nuestro /index.html/ [[https://raw.githubusercontent.com/mdn/learning-area/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html][Ver ejemplo]]
-  2) Externo: enlazando a un archivo /script.js/ desde nuestro HTML. Con la propiedad =defer= no interrumpimos la carga de contenido Ejemplo: [[https://raw.githubusercontent.com/mdn/learning-area/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html][html]] [[https://raw.githubusercontent.com/mdn/learning-area/main/javascript/introduction-to-js-1/what-is-js/script.js][js]]
-     #+begin_src html
-       <script src="script.js" defer></script>
-     #+end_src
-  3) En línea: usando controladores de JS (mala praxis):
-     #+begin_src html
-       <button onclick="createParagraph()">Click me!</button>
-     #+end_src
+  - Interno: con las etiquetas =<script>= y =</script>= dentro de nuestro /index.html/ [[https://raw.githubusercontent.com/mdn/learning-area/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html][Ver ejemplo]]
+  - Externo: enlazando a un archivo /script.js/ desde nuestro HTML. Con la propiedad =defer= no interrumpimos la carga de contenido Ejemplo: [[https://raw.githubusercontent.com/mdn/learning-area/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html][html]] [[https://raw.githubusercontent.com/mdn/learning-area/main/javascript/introduction-to-js-1/what-is-js/script.js][js]]
+  #+begin_src html
+  <script src="script.js" defer></script>
+  #+end_src
+  - En línea: usando controladores de JS (mala praxis):
+  #+begin_src html
+  <button onclick="createParagraph()">Click me!</button>
+  #+end_src
 ** Tipos de errores
 - De *sintáxis*: src_js[:exports code]{boton.addeventListener('click', trigger) //Solución: addEventListener}
 - De *lógica*: cuando estamos aplicando mal conceptos de lógica, no interrumpe nuestro código
 ** Variables
-- Una variable es un contenedor para un valor como un número (/int/ o
+- Una variable es un *contenedor* para un valor como un número (/int/ o
   /float/) que podemos usar en una suma o una cadena de caracteres
   (/String/) que podemos usar como parte de una frase
-- Lo bueno de las variables es que los valores que contienen pueden variar :)
+- Lo bueno de las variables es que los valores que contienen pueden *variar* :)
 #+reveal: split
 - Pueden contener casi cualquier cosa: no solo números y cadenas, también booleanas o funciones completas
 #+attr_html: :height 300px :display block
 #+caption: Variables como cajas. Fuente: [[https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Variables][Mozilla]]
   [[https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables/boxes.png]]
 *** Declarar e iniciar una variable
-- Para crear o declarar una variable lo hacemos con =var= o =let= seguido del nombre que le queramos dar a esa variable: =let edad=
-- Para iniciarla podemos asignarle un valor inicial: =edad = 21=
+- Para crear o *declarar* una variable lo hacemos con =var= o =let= seguido del nombre que le queramos dar a esa variable: =let edad=
+- Para *iniciarla* podemos asignarle un valor inicial: =edad = 21=
 - Podemos declarar e iniciar una variable al mismo tiempo =let edad = 21=
 - Esto lo podemos probar desde la consola del navegador
 *** Diferencia entre =let= y =var=
@@ -716,86 +716,87 @@ function updateName() {
   - Podemos almacenar números en variables, ya sean enteros o decimales
   - En otros lenguajes de programación sí que es necesario indicar si lo que se almacena es entero o decimal
   - Este valor no se indica con comillas
-    #+begin_src js
-      let miEdad = 17;
-    #+end_src
+  #+begin_src js
+    let miEdad = 17;
+  #+end_src
+#+reveal: split  
 - Strings
   - Los strings o cadenas son piezas de texto
   - Los valores van encerrados entre comillas simples o dobles
-   #+begin_src js
-     let frase1 = "Hola a todxs!";
-   #+end_src
-#+reveal: split:t
+  #+begin_src js
+    let frase1 = "Hola a todxs!";
+  #+end_src
+#+reveal: split
 - Booleanos
   - Son valores verdadero/false: =true= o =false=
   - Se suelen usar para probar una condición, después de lo cual se ejecuta el código según corresponda
-    #+begin_src js
-      let estoyVivo = true;
-    #+end_src
+  #+begin_src js
+    let estoyVivo = true;
+  #+end_src
   - También se puede usar así:
-    #+begin_src js
-      let test = 6 < 3; //test ahora contiene el valor false
-    #+end_src
-#+reveal: split:t
+  #+begin_src js
+    let test = 6 < 3; //test ahora contiene el valor false
+  #+end_src
+#+reveal: split
 - Arrays
   - Es un objeto único que contiene multiples valores encerrados entre corchetes y separados por comas
-    #+begin_src js
-      let nombres = ["Ana","Cris","Juanlu","Paula","Sergi"];
-      let edades = [31,32,30,30,35];
-    #+end_src
+  #+begin_src js
+    let nombres = ["Ana","Cris","Juanlu","Paula","Sergi"];
+    let edades = [31,32,30,30,35];
+  #+end_src
   - Una vez que los iniciamos podemos acceder a ellos de la siguiente manera:
-    #+begin_src js
-      nombres[0]; // qué devuelve?
-      edades[3]; // qué devuelve?
-    #+end_src
+  #+begin_src js
+    nombres[0]; // qué devuelve?
+    edades[3]; // qué devuelve?
+  #+end_src
   - También podemos cambiar el valor del índice que indiquemos
-    #+begin_src js
-      nombres[1] = "Cristina";
-    #+end_src
+  #+begin_src js
+    nombres[1] = "Cristina";
+  #+end_src
   - El número que indicamos entre corchetes se conoce como *índice*
-#+reveal: split:t    
+#+reveal: split    
 - Objetos
   - Un objeto es una estructura de código que modela un objeto de la vida real
-    #+begin_src js
-      let perro = {nombre : "chispas", raza : "dálmata"};
-    #+end_src
+  #+begin_src js
+    let perro = {nombre : "chispas", raza : "dálmata"};
+  #+end_src
   - Para recuperar la información almacenada en el objeto podemos usar:
-    #+begin_src js
-      perro.nombre // Nos devuelve "chispas"
-      perro.raza // Nos devuelve "dálmata"
-    #+end_src
+  #+begin_src js
+    perro.nombre // Nos devuelve "chispas"
+    perro.raza // Nos devuelve "dálmata"
+  #+end_src
 *** Tipado dinámico
 - Esto significa que en JS no es necesario especificar el tipo de datos que contendrá una variable
 - Si declaras una variables y le das valor entre comillas, automáticamente la trata como un string
-  #+begin_src js
-    let miPalabra = "Hola"
-  #+end_src
+#+begin_src js
+  let miPalabra = "Hola"
+#+end_src
 - Con el operador =typeof= podemos saber qué tipo de variable es. Podemos probar esto en la consola
 *** Constantes
 - Funciona igual que =let=, salvo por una expcepción: una vez declarado no se puede cambiar
 - Esto puede evitar problemas de código de terceros que intenten cambiar esa variable
-  #+begin_src js
-    const diasSemana = 7;
-    const horasDia = 24
-  #+end_src
+#+begin_src js
+  const diasSemana = 7;
+  const horasDia = 24
+#+end_src
 ** Matemáticas!
 *** Operadores aritméticos
 - Los típicos: =+=, =-=, =*=, =/=
 - Quizás no tan conocidos: =%=. Este operador se le conoce como *sobrante* o *módulo*. Nos devuelve el restante en entero de una división
-  #+begin_src js
-    10 % 3 //El restante sería 1
-  #+end_src
+#+begin_src js
+10 % 3 //El restante sería 1
+#+end_src
 *** Precedencia de Operadores
 - Algunos operadores son aplicados antes que otros:
   - multiplicación y división antes que suma o resta
   - suma y resta, de izquierda a derecha
 - Para alterar la precedencia se pueden colocar paréntesis
-  #+begin_src js
+#+begin_src js
     let num1 = 50;
     let num2 = 10;
     num2 + num1 / 8 + 2; // Cuánto devuelve?
     (num2 + num1) / (8 + 2); // Cuánto devuelve?
-  #+end_src
+#+end_src
 *** Operadores de incremento y decremento
 - Se utiliza mucho en programación cuando queremos incrementar o disminuir el valor de una variable
 - Para incrementar la variable en 1 usamos =++=: src_js[:exports code]{numIntentos++;}
@@ -804,17 +805,17 @@ function updateName() {
 *** Operadores de asignación
 - Estos sirven para aplicar el operador sobre la propia variable y el resultado asignárselo sobre la misma
 - Pueden ser los siguientes: =+==, =-==, =*==, =/==
-  #+begin_src js
-    let x = 10;
-    let y = 5;
-    x *= y; // Cuánto devuelve?
-  #+end_src
+#+begin_src js
+  let x = 10;
+  let y = 5;
+  x *= y; // Cuánto devuelve?
+#+end_src
 *** Operadores de comparación
 - Estos operadores nos devuelven =true= o =false=
 - Igual estricto: ===== Comprueba si lo que hay en un lado es igual a lo que hay en el otro
-  #+begin_src js
-    5 === 2 + 4;
-  #+end_src
+#+begin_src js
+  5 === 2 + 4;
+#+end_src
 - Igual no estricto: =!=== Comprueba si los valores *no* son iguales entre sí
 - Puede que veamos también ==== y =!==, pero esto no comprueba si es del mismo tipo de dato. Mejor usar los indicados anteriormente
 #+reveal: split: t
@@ -832,29 +833,29 @@ function updateName() {
 
 #+REVEAL_HTML: <div class="column" style="float:right; width: 45%">
 #+begin_src js
-let btn = document.querySelector('button');
-let txt = document.querySelector('p');
+  let btn = document.querySelector('button');
+  let txt = document.querySelector('p');
 
-btn.addEventListener('click', updateBtn);
+  btn.addEventListener('click', updateBtn);
 
-function updateBtn() {
-  if (btn.textContent === 'Iniciar máquina') {
-    btn.textContent = 'Detener máquina';
-    txt.textContent = 'La máquina se inició!';
-  } else {
-    btn.textContent = 'Iniciar máquina';
-    txt.textContent = 'La máquina se detuvo.';
+  function updateBtn() {
+    if (btn.textContent === 'Iniciar máquina') {
+      btn.textContent = 'Detener máquina';
+      txt.textContent = 'La máquina se inició!';
+    } else {
+      btn.textContent = 'Iniciar máquina';
+      txt.textContent = 'La máquina se detuvo.';
+    }
   }
-}
 #+end_src
 #+REVEAL_HTML: </div>
 ** Manejando texto
 - Podemos usar tanto comillas simples =''= como dobles =""=, pero no una de cada
 - Cuando queramos usar comilla simple o comilla doble en el string, podemos usar la contraria a la que estemos utilizando para encerrar
-  #+begin_src js
-let comSimp = 'El "éxito" es el resultado de la determinación y el arduo trabajo';
-let comDobl = "I'm gonna make him an offer he can't refuse";
-  #+end_src
+#+begin_src js
+  let comSimp = 'El "éxito" es el resultado de la determinación y el arduo trabajo';
+  let comDobl = "I'm gonna make him an offer he can't refuse";
+#+end_src
 ** Escapado de caracteres
 - Con la barra invertida =\= podemos escapar caracteres en JS
 #+begin_src js
@@ -864,185 +865,90 @@ let comDobl = "I'm gonna make him an offer he can't refuse";
 - Podemos unir strings con el símbolo =+=
 - Se suele hacer para construir una URL y la llamada a APIs
 #+begin_src js
-let uno = 'Hola, ';
-let dos = 'cómo estás?';
-let unir = uno + dos;
-unir;
+  let uno = 'Hola, ';
+  let dos = 'cómo estás?';
+  let unir = uno + dos;
+  unir;
 #+end_src
 - Se puede usar en combinación
-  #+begin_src js
-let unir = uno + "Juana, " + dos;
-unir;
-  #+end_src
+#+begin_src js
+  let unir = uno + "Juana, " + dos;
+  unir;
+#+end_src
 ** Números VS Strings
 - Podemos concatenar números y strings, el resultado será un string
-  #+begin_src js
-    let frase = "Tengo estos años: " + 25;
-  #+end_src
+#+begin_src js
+  let frase = "Tengo estos años: " + 25;
+#+end_src
 - Podemos concatenar dos números como strings:
-  #+begin_src js
-    let unirNums = "20" + "23";
-  #+end_src
+#+begin_src js
+  let unirNums = "20" + "23";
+#+end_src
 ** Conversión
 - Si queremos convertir un número a string, podemos usar =Number()=
-  #+begin_src js
-    let myString = '123';
-    let myNum = Number(myString);
-  #+end_src
+#+begin_src js
+  let myString = '123';
+  let myNum = Number(myString);
+#+end_src
 - Si queremos convertir un string a número, podemos usar =toString()=
-  #+begin_src js
-    let myNum = 123;
-    let myString = myNum.toString();
-  #+end_src
+#+begin_src js
+  let myNum = 123;
+  let myString = myNum.toString();
+#+end_src
 ** Métodos de strings
 - Todo en JS son objetos, y cada objeto tiene una serie de propiedades y métodos
 - Dependiendo del objeto que sea tendrá propiedades y métodos específicos.
 - Saber la longitud de un string:
-  #+begin_src js
+#+begin_src js
   let palabra = 'Anticonstitucionalmente';
   palabra.length;
-  #+end_src
-  #+reveal: split
+#+end_src
+#+reveal: split
 - Extraer un caracter específico:
-  #+begin_src js
+#+begin_src js
   palabra[5];
-  #+end_src
+#+end_src
 - Saber el último caracter de un string:
-  #+begin_src js
+#+begin_src js
   palabra[palabra.length-1];  
-  #+end_src
-  #+reveal: split: t
+#+end_src
+#+reveal: split: t
 - Si queremos extraer parte del string:
-  #+begin_src js
+#+begin_src js
   palabra.slice(0,5); //El segundo parámetro tiene que ser el caracter posterior al que queremos que termine
-  #+end_src
-  - Si sólo indicamos un argumento, troceará a partir de este:
-    #+begin_src js
-      palabra.slice(4);
-    #+end_src
-    #+reveal: split: t
+#+end_src
+- Si sólo indicamos un argumento, troceará a partir de este:
+#+begin_src js
+  palabra.slice(4);
+#+end_src
+#+reveal: split: t
 - Para cambiar el string a minúscula o a mayúscula:
-  #+begin_src js
-    palabra.toLowerCase();
-    palabra.toUpperCase();
-  #+end_src
+#+begin_src js
+  palabra.toLowerCase();
+  palabra.toUpperCase();
+#+end_src
 - Actualizar partes de un string:
-  #+begin_src js
-    palabra.replace('Anti', 'Pro');
-  #+end_src
+#+begin_src js
+  palabra.replace('Anti', 'Pro');
+#+end_src
 ** TODO Métodos de Arrays
 - Longitud de un array:
-  #+begin_src js
-    let secuencia = [1,1,2,3,5,8,13];
-    secuencia.length;
-  #+end_src
-  - Un uso muy común es en el bucle =for=
-    #+begin_src js
-      for(let i = 0; i < secuencia.length; i++){
-          console.log(secuencia[i]);
-          }
-    #+end_src
+#+begin_src js
+  let secuencia = [1,1,2,3,5,8,13];
+  secuencia.length;
+#+end_src
+- Un uso muy común es en el bucle =for=
+#+begin_src js
+  for(let i = 0; i < secuencia.length; i++){
+           console.log(secuencia[i]);
+           }
+#+end_src
 #+reveal: split:t
 - Conversión entre string y arrays:
-  #+begin_src js
-    let ciudades = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
-    let ciudadesArray = ciudades.split(ciudades, ",");
-  #+end_src
-** Variables explicado                                            :noexport:
-- // var number = 5;
-
-// number = "Julian"
-
-// number = true
-
-// number = 6;
-
-// number = number + 1;
-
-// number++
-
-// number = number + 2;
-
-// number += 2;
-
-// number -= 4;
-
-// number *= 4;
-
-// number /= 3;
-
-
-// var str1 = "Vamos a unir este string "
-// var str2 = "con este otro"
-
-// console.log(str1+str2)
-
-// var myArray = [["Juan", 23],["Eva", 45]];
-
-// myArray = [["Juan", 23],["Eva", 45], ["Carlos", 21]];
-
-// myArray.push(["Ana", 19]);
-
-// myArray.pop();
-
-// myArray.shift();
-
-// myArray.unshift(["Ana", 19]);
-
-// function nombreFuncion(){
-//     console.log("Hola!");
-// }
-
-// nombreFuncion();
-
-// function funcionConArgumentos(a,b){
-//     console.log(a*b);
-// }
-
-// funcionConArgumentos(10,5);
-
-// var comidaFavorita = "Macarrones";
-
-// function dimeTuComidaFavorita(){
-//     var comidaFavorita = "Ensalada";
-//     return comidaFavorita;
-// }
-
-// console.log(dimeTuComidaFavorita());
-// console.log(comidaFavorita);
-
-
-// function compararIgual(val) {
-//     if (val != 100) {
-//         return "Not Equal";
-//     }
-//     return "Equal";
-// }
-
-// console.log(compararIgual(99));
-
-var cat = {
-    "nombre" : "Whiskas",
-    "patas" : 4,
-    "enemigos" : ["agua", "perros"],
-    "mejores amigos": ["humanos", "otros gatos"]
-};
-
-cat.patas = 5;
-
-var patasGato = cat.patas;
-
-console.log(patasGato);
-
-var mejoresAmigos = cat["mejores amigos"]
-
-console.log(mejoresAmigos);
-
-delete cat.patas
-
-cat.color = "gris";
-
-console.log(cat);
+#+begin_src js
+  let ciudades = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+  let ciudadesArray = ciudades.split(ciudades, ",");
+#+end_src
 * Manuales / Docs
 	- https://developer.mozilla.org/es/docs/Learn/HTML
 	- https://www.w3schools.com/html/default.asp
