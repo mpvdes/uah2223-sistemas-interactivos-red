@@ -31,6 +31,7 @@
 - [[Bootstrap][Bootstrap]]
 - [[Github Pages][Github Pages]]
 - [[JavaScript][JavaScript]]
+- [[Scrollama][Scrollama]]
 - [[Manuales / Docs][Manuales / Docs]]
 * Resumen
 - Haremos una introducción básica a los elementos que componen una web
