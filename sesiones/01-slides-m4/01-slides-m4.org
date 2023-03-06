@@ -931,7 +931,7 @@ p {
 #+begin_src js
   palabra.replace('Anti', 'Pro');
 #+end_src
-** TODO Métodos de Arrays
+** Métodos de Arrays
 - Longitud de un array:
 #+begin_src js
   let secuencia = [1,1,2,3,5,8,13];
@@ -943,12 +943,29 @@ p {
            console.log(secuencia[i]);
            }
 #+end_src
-#+reveal: split:t
+#+reveal: split
 - Conversión entre string y arrays:
 #+begin_src js
   let ciudades = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
   let ciudadesArray = ciudades.split(ciudades, ",");
 #+end_src
+* Scrollama
+- [[https://github.com/russellsamora/scrollama][Scrollama]] es una librería javascript simple que sirve para
+  incorporar el efecto de scrollytelling en nuestros proyectos web
+- El Scrollytelling permite la interactividad de fijar un contenido
+  (stick) y seguir haciendo scroll para que diferentes elementos
+  aparezcan y tengan relación con el elemento fijado
+- En el propio repositorio de scrollama.js podéis encontrar multiples
+  [[https://github.com/russellsamora/scrollama#scrollama-in-the-wild][ejemplos]] de webs que utilizan la librería
+** Para la práctica
+- Comenzamos clonando el repositorio de la librería que ya trae ejemplos de los que partir
+#+begin_src bash
+git clone https://github.com/russellsamora/scrollama.git
+#+end_src
+- Usaremos el que aparece en  "docs/sticky-overlay"
+- Reestructuraremos el html en diferentes archivos css y js
+- La librería por defecto utiliza a su vez la librería d3.js. Veremos qué partes del código utiliza d3js
+- Probaremos con un ejercicio simple y después lo integraremos en nuestro desarrollo anterior con bootstrap
 * Manuales / Docs
 	- https://developer.mozilla.org/es/docs/Learn/HTML
 	- https://www.w3schools.com/html/default.asp
