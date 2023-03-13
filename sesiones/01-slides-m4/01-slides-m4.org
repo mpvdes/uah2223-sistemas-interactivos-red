@@ -32,6 +32,8 @@
 - [[Github Pages][Github Pages]]
 - [[JavaScript][JavaScript]]
 - [[Scrollama][Scrollama]]
+- [[Otros interactivos][Otros interactivos]]
+- [[Accesibilidad Web][Accesibilidad Web]]
 - [[Manuales / Docs][Manuales / Docs]]
 * Resumen
 - Haremos una introducción básica a los elementos que componen una web
@@ -967,6 +969,53 @@ git clone https://github.com/russellsamora/scrollama.git
 - Reestructuraremos el html en diferentes archivos css y js
 - La librería por defecto utiliza a su vez la librería d3.js. Veremos qué partes del código utiliza d3js
 - Probaremos con un ejercicio simple y después lo integraremos en nuestro desarrollo anterior con bootstrap
+* TODO Otros interactivos
+** Knightlab
+- https://knightlab.northwestern.edu/
+- Laboratorio de innovación tecnológica dedicado a la investigación y
+  el desarrollo de nuevas herramientas y tecnologías para el
+  periodismo y la comunicación
+- Promueve la innovación en el periodismo y la comunicación, a través
+  de la investigación, el análisis y la experimentación
+** Juxtapose
+- Comparación de imágenes por medio de interacción
+- Web: https://juxtapose.knightlab.com/
+- Repo: https://github.com/NUKnightLab/juxtapose
+- Ejemplo: [[https://interaktiv.morgenpost.de/berlin-1945-2015/][Berlin 1945 y hoy]]
+** Timeline
+- Crear linea del tiempo
+- Web: http://timeline.knightlab.com/
+- Repo: https://github.com/NUKnightLab/TimelineJS3
+- Ejemplo: [[https://timeline.knightlab.com/examples/houston/index.html][Whitney Houston]]
+** Soundcite
+- Permite añadir audio en línea con tu historia
+- Web: http://soundcite.knightlab.com/
+- Repo: https://github.com/NUKnightLab/
+* TODO Accesibilidad Web
+"El poder de la web está en su universalidad. El acceso de todos, sin
+importar su discapacidad, es un aspecto esencial." - Tim Berners-Lee,
+Director del W3C e inventor de la World Wide Web.
+#+reveal: split
+- Derecho humano básico recogido en el derecho de acceso a las tecnologías de la información y acceso a la información
+- Web Accessibility Initiative ([[https://www.w3.org/WAI/][WAI]]) at W3C
+  - Contenido web
+  - Herramientas
+  - Especificaciones
+** Ejemplos de accesibilidad web
+- Texto alternativo en imágenes
+- Entrada por teclado
+- Transcripciones de audio
+- Contraste de color
+** Comprobando accesibilidad de nuestra web
+- https://validator.w3.org/
+- https://wave.webaim.org/
+** Universalidad web
+- Sitio web accesible a cualquier persona, independientemente de su
+  ubicación geográfica, idioma, cultura, habilidades o dispositivos
+  utilizados
+- Implica que un sitio web debe ser compatible con una amplia gama de
+  dispositivos y navegadores, y debe proporcionar contenido en varios
+  idiomas y formatos
 * Manuales / Docs
 	- https://developer.mozilla.org/es/docs/Learn/HTML
 	- https://www.w3schools.com/html/default.asp
